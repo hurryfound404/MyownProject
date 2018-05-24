@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/g-nav.css" />
+    <link rel="stylesheet" href="css/g-footer.css" />
+    <link rel="stylesheet" href="css/style1-sj.css" />
+</head>
+
+<body>
+    <div id="loading">
+        <img src="images/index/load.gif" alt="">
+    </div>
+    <!--导航DIV-->
+    <%-include g-nav.html%>
+    <section>
+        <!--时尚搭配板块-->
+        <div class="module-headline1">
+            <p class="headline">ULIFE
+                <span>时尚搭配</span>
+            </p>
+            <div class="headline-add">Fashion collocation</div>
+        </div>
+        <div class="banner">
+            <div class="mengceng">
+                <div class="div1">
+                    <div class="hoverMove1"></div>
+                    <a href="">
+                        <img class="picPIC" src="images/ElegantCollocation.img/koutu3.png" alt="" />
+                    </a>
+                    <div class="text1">
+                        <p class="price1">￥1,680</p>
+                        <p>绒面金属感皮革</p>
+                        <div class="hr1"></div>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div class="hoverMove2"></div>
+                    <img class="lazy" src="images/ElegantCollocation.img/koutu5.png" alt="" />
+                    <div class="text2">
+                        <p class="price2">￥1,680</p>
+                        <p>绒面粗中跟鞋</p>
+                        <div class="hr2"></div>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="hoverMove3"></div>
+                    <div class="text3">
+                        <p class="price3">￥1,680</p>
+                        <p>绒面金属感皮革</p>
+                        <div class="hr3"></div>
+                    </div>
+                </div>
+                <div class="div4">
+                    <img class="lazy" src="images/ElegantCollocation.img/koutu1.png" alt="" />
+                    <div class="text4">
+                        <p class="price4">￥1,680</p>
+                        <p>绒面金属感皮革</p>
+                        <div class="hr4"></div>
+                    </div>
+                </div>
+                <div class="div5">
+                    <img class="lazy" src="images/ElegantCollocation.img/koutu2.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <!--ULIFE精选搭配模块-->
+        <div class="module-headline2">
+            <p class="headline">ULIFE
+                <span>精选搭配</span>
+            </p>
+            <div>Selection collocation</div>
+        </div>
+        <!--瀑布流图片显示主容器-->
+        <div id="selectionCollocation" class="clearfix">
+            <!--用来分割每个数据块之间的间隔距离的DIV-->
+            <div class="box">
+                <div class="pic">
+                    <img class="oPic" src="images/ElegantCollocation.img/pic10.png" alt="" />
+                </div>
+                <p>清新淳朴甜美的风格穿出少女范儿</p>
+            </div>
+            <div class="box">
+                <div class="pic">
+                    <img class="oPic" src="images/ElegantCollocation.img/pic12.jpg" alt="" />
+                </div>
+                <p>搭配连衣裙婚纱穿出最美的你</p>
+            </div>
+            <div class="box">
+                <div class="pic">
+                    <img class="oPic" src="images/ElegantCollocation.img/pic14.png" alt="" />
+                </div>
+                <p>轻奢时尚美提升您的职场气质</p>
+            </div>
+            <div class="box">
+                <div class="pic">
+                    <img class="oPic" src="images/ElegantCollocation.img/pic18.png" alt="" />
+                </div>
+                <p>简单线条勾勒妖娆 穿出异样酷感气质</p>
+            </div>
+        </div>
+    </section>
+    <%-include g-footer.html%>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/g-nav.js"></script>
+    <!-- <script src="less.min.js"></script> -->
+    <script src="js/jquery-lazyload-js.js"></script>
+    <script>
+        
+        $('.div1').on('click',function(){
+            $.ajax({
+                type: "get",
+                url: "/prlproid.do",
+                data: {
+                    proid: 1
+                },
+                success: function (ajaxObj) { //console.log(ajaxObj);
+                    if (ajaxObj == "ok") {
+                        window.location.href = "productInfo.html";
+                    }
+                }
+            })
+        })
+
+        var httpRequest = new XMLHttpRequest();
+        function fashionList() {
+            ajaxFn({
+                "method": "get",
+                "url": "/fashionList.do",
+                "param": "",
+                "callback": function (httpRequest) {
+                    var obj = JSON.parse(httpRequest.responseText);
+                    console.log(obj);
+                    var selectionCollocation = document.getElementById('selectionCollocation');
+                    var index = 0;
+                    for (var i = 0; i < obj.length; i++) {
+                        $(".box").eq(index).append("<div class='pic'><img class='oPic' src='images/ElegantCollocation.img/" + obj[i].com_img_url + "'/></div><p class='page'>" + obj[i].com_img_name + "</p>");
+                        index++;
+                        if (index > 3) {
+                            index = 0;
+                        }
+                    }
+                    $('#selectionCollocation').on('click','.pic',function(){
+            $.ajax({
+                type: "get",
+                url: "/prlproid.do",
+                data: {
+                    proid: 1
+                },
+                success: function (ajaxObj) { //console.log(ajaxObj);
+                    if (ajaxObj == "ok") {
+                        window.location.href = "productInfo.html";
+                    }
+                }
+            })
+        })
+
+                }
+            });
+        }
+        $(".selectionCollocation>div>div>a>img").attr("class", "imgPic");
+
+        $(".div3").hover(function () {
+            $(".div5").css("transform", "scale(1.1,1.1)").css("right", "320px");
+            $(".div3>.text3>p").css("color", "#b28b60");
+        }, function () {
+            $(".div5").css("transform", "scale(1,1)").css("right", "300px");
+            $(".div3>.text3>p").css("color", "white");
+        });
+        $(".div1").hover(function () {
+            $(".div1>a>img").css("transform", "scale(1.1,1.1)").css("marginLeft", "60px");
+            $(".div1>.text1>p").css("color", "#b28b60");
+        }, function () {
+            $(".div1>a>img").css("transform", "scale(1,1)").css("marginLeft", "100px");
+            $(".div1>.text1>p").css("color", "white");
+        });
+        $(".div2").hover(function () {
+            $(".div2>img").css("transform", "scale(1.1,1.1)").css("right", "350px");
+            $(".div2>.text2>p").css("color", "#b28b60");
+        }, function () {
+            $(".div2>img").css("transform", "scale(1,1)").css("right", "330px");
+            $(".div2>.text2>p").css("color", "white");
+        });
+        $(".div4").hover(function () {
+            $(".div4>img").css("transform", "scale(1.1,1.1)").css("marginLeft", "-20px");
+            $(".div4>.text4>p").css("color", "#b28b60");
+        }, function () {
+            $(".div4>img").css("transform", "scale(1,1)").css("marginLeft", "0px");
+            $(".div4>.text4>p").css("color", "black");
+        });
+        //滚轮监听预加载
+        $(window).scroll(function (e) {
+            if (scrollY > 200) {
+                $('.div4').css("top", "0px").css("opacity", "1");
+                $('.div2').css("top", "0px").css("opacity", "1");
+                $('.div3').css("bottom", "0px").css("opacity", "1");
+                $('.div1').css("bottom", "0px").css("opacity", "1");
+                $('.div5').css("bottom", "0px").css("opacity", "1");
+            }
+            var h = $(document.body).height();//网页文档的高度
+            var c = $(document).scrollTop();//滚动条距离网页顶部的高度
+            var wh = $(window).height(); //页面可视化区域高度
+            var indexly = 0;
+            ////                   将数据块渲染到当前页面的尾部
+            if (Math.ceil(wh + c) >= h) {
+                console.log("444");
+                fashionList();
+            }
+        });
+        $('header').hide();
+            $('section').hide();
+            $('footer').hide();
+            
+            window.onload = function () {
+                // if(document.readyState == 'complete'){
+                setTimeout(() => {
+                    // $('#loading').fadeOut(500); 
+                    $('#loading').addClass('animated zoomOutDown');
+                    $('header').show();
+                    $('section').show();
+                    $('footer').show();
+                }, 1200);
+                // }  
+            }
+    </script>
+</body>
+
+</html>

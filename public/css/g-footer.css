@@ -1,0 +1,98 @@
+#g-footer .footer-top {
+  background-color: #fff;
+  padding: 45px 0;
+}
+#g-footer .footer-top li {
+  float: left;
+  width: 238px;
+}
+#g-footer .footer-top li img {
+  width: 65px;
+  margin-right: 25px;
+}
+#g-footer .footer-top li .f-t-p1 {
+  margin-top: 2px;
+  margin-bottom: 8px;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #232321;
+}
+#g-footer .footer-top li .f-t-p2 {
+  line-height: 12px;
+  color: #999;
+  font-family: toplifeHomeEn;
+  margin-top: 4px;
+}
+#g-footer .footer-middle {
+  background-color: #232321;
+  padding: 50px;
+}
+#g-footer .footer-middle dl {
+  float: left;
+  color: #fff;
+  font-size: 14px;
+  margin-right: 100px;
+  margin-left: 8px;
+}
+#g-footer .footer-middle dl dt {
+  font-weight: 700;
+}
+#g-footer .footer-middle dl dd {
+  color: #c1c1c1;
+  font-size: 12px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+#g-footer .footer-middle dl dd:hover {
+  color: #c4a66a;
+}
+#g-footer .footer-middle .qr-code .qr-code-img1,
+#g-footer .footer-middle .qr-code .qr-code-img2 {
+  display: inline-block;
+  width: 109px;
+  height: 109px;
+  background: url("../images/g-footer/code.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#g-footer .footer-middle .qr-code .qr-code-img1 {
+  margin-left: 120px;
+}
+#g-footer .footer-middle .qr-code .qr-code-img2 {
+  margin-left: 60px;
+}
+#g-footer .footer-middle .qr-code .code-p1 {
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+#g-footer .footer-middle .qr-code .code-p2 {
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+}
+#g-footer .footer-bottom {
+  border-top: 1px solid #c4a66a;
+  background-color: #232321;
+  position: relative;
+  padding: 10px 0;
+}
+#g-footer .footer-bottom .f-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+#g-footer .footer-bottom .f-logo img {
+  width: 60px;
+}
+#g-footer .footer-bottom .copy-right {
+  height: 60px;
+  line-height: 60px;
+  color: #c1c1c1;
+  float: right;
+}

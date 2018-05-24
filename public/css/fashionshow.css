@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 3620px;
+}
+.sectionTwo {
+  width: 1190px;
+  margin: 0 auto;
+}
+nav {
+  width: 100%;
+  height: 120px;
+  background-color: #00b896;
+}
+.banner1 {
+  width: 100%;
+  height: 505px;
+  position: relative;
+  overflow: hidden;
+}
+.banner1 img {
+  margin: 0 auto;
+  display: block;
+}
+.banner1 > div > span {
+  color: #b28b60;
+  font-size: 35px;
+  position: absolute;
+  top: 60px;
+  left: 70px;
+}
+.banner1 > div {
+  position: absolute;
+  top: 60px;
+  left: 76%;
+  width: 230px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.banner1 > div > p {
+  color: white;
+  font-size: 13px;
+  width: 140px;
+  margin: 170px auto;
+  height: 25px;
+  line-height: 25px;
+}
+.banner1 > div > div {
+  position: absolute;
+  border-bottom: 1px solid #b28b60;
+  width: 140px;
+  top: 140px;
+  left: 45px;
+}
+.banner-q {
+  position: relative;
+  margin-top: 50px;
+}
+.banner-q > span:nth-child(1) {
+  color: #b28b60;
+  font-size: 36px;
+  margin-left: 40%;
+  margin-top: 20px;
+  display: inline-block;
+}
+.banner-q > span:nth-child(2) {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.banner-q > p {
+  font-size: 16px;
+  Letter-spacing: 6px;
+  margin-left: 42%;
+  padding-top: 10px;
+}
+.pictop > img,
+.picbtm > img {
+  width: 410px;
+}
+.picleft > img,
+.picright > img {
+  width: 320px;
+}
+.sectionTwo {
+  opacity: 0;
+  transition: all 1s;
+}
+.picleft {
+  margin-left: 50px;
+  transition: all 1s;
+}
+.pictop {
+  position: absolute;
+  top: 470px;
+  left: 380px;
+  text-decoration: none;
+  transition: all 1s;
+}
+.picright {
+  position: absolute;
+  right: 65px;
+  top: 95px;
+  transition: all 1s;
+}
+.pictime {
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  z-index: -100;
+}
+.picbtm {
+  position: absolute;
+  top: 160px;
+  left: 380px;
+  text-decoration: none;
+  transition: all 1s;
+}
+.showW,
+.line {
+  color: #b28b60;
+}
+.tShow1 {
+  position: absolute;
+  top: 745px;
+  left: 30px;
+}
+.tShow2 {
+  position: absolute;
+  top: 650px;
+  left: 87%;
+}
+.line1 {
+  border-bottom: 2px solid #b28b60;
+  width: 60px;
+}
+.lineRight {
+  position: absolute;
+  top: 780px;
+  left: 30px;
+}
+.lineLift {
+  position: absolute;
+  top: 685px;
+  right: 1%;
+}
+
+.sectionTwo .line {
+  border-bottom: 2px solid #b28b60;
+  width: 0;
+  transition: all 1s;
+}
+.picleft:hover .lineRight {
+  width: 100px;
+}
+.picright:hover .lineLift {
+  width: 100px;
+}
+.btmShose {
+  position: absolute;
+  left: 330px;
+  top: 210px;
+  transition: all 1s;
+}
+.btmline {
+  position: absolute;
+  top: 240px;
+  right: 30px;
+  transition: all 1s;
+}
+.pictop:hover .btmShose {
+  left: 350px;
+}
+.pictop:hover .btmline {
+  right: 50px;
+}
+.topShose {
+  position: absolute;
+  left: 310px;
+  top: 250px;
+  transition: all 1s;
+}
+.topline {
+  position: absolute;
+  top: 280px;
+  right: 30px;
+  transition: all 1s;
+}
+.picbtm:hover .topShose {
+  left: 330px;
+}
+.picbtm:hover .topline {
+  right: 66px;
+}
+.sectionThree {
+  position: relative;
+  width: 1190px;
+  margin: 100px auto;
+}
+.sectionThree span:nth-child(1) {
+  color: #b28b60;
+  font-size: 36px;
+  margin-left: 40%;
+  margin-top: 20px;
+  display: inline-block;
+}
+.sectionThree span:nth-child(2) {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.sectionThree p:nth-child(3) {
+  font-size: 16px;
+  Letter-spacing: 6px;
+  margin-left: 40%;
+  padding-top: 10px;
+}
+.sectionThree div:nth-child(4) {
+  width: 300px;
+  height: 470px;
+  border: 3px solid #b28b60;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+.sectionThree div:nth-child(4) h3 {
+  color: #b28b60;
+  margin-left: 50px;
+  line-height: 260px;
+}
+.sectionThree div:nth-child(4) p {
+  color: black;
+  font-size: 16px;
+  text-justify: auto;
+  text-align: justify;
+  width: 190px;
+  margin-left: 40px;
+  line-height: 40px;
+  margin-top: -50px;
+}
+.sectionThree img {
+  width: 770px;
+  position: absolute;
+  top: 210px;
+  left: 330px;
+}
+.sectionThree div:nth-child(6) {
+  position: absolute;
+  z-index: -10;
+  width: 770px;
+  height: 470px;
+  top: 220px;
+  left: 340px;
+  background-color: #080808;
+  opacity: 0.3;
+}
+.sectionThree div:nth-child(7) {
+  position: absolute;
+  z-index: -15;
+  top: 230px;
+  left: 350px;
+  background-color: #080808;
+  width: 770px;
+  height: 470px;
+  opacity: 0.2;
+}
+.sectionFour {
+  width: 100%;
+  position: relative;
+  height: 1500px;
+  margin-top: 140px;
+  /*overflow: hidden;*/
+}
+.sectionFour div:nth-child(2) {
+  height: 340px;
+  text-align: center;
+}
+.sectionFour div:nth-child(2) img {
+  margin-top: -50px;
+  height: 340px;
+}
+.sectionFour > div:nth-child(1) {
+  width: 1190px;
+  margin: 100px auto;
+}
+.sectionFour > div:nth-child(1) span:nth-child(1) {
+  color: #b28b60;
+  font-size: 36px;
+  margin-left: 40%;
+  margin-top: 20px;
+  display: inline-block;
+}
+.sectionFour > div:nth-child(1) span:nth-child(2) {
+  font-size: 30px;
+  margin-left: 10px;
+}
+.sectionFour > div:nth-child(1) p {
+  font-size: 16px;
+  Letter-spacing: 4px;
+  margin-left: 40%;
+  padding-top: 10px;
+}
+.cc {
+  width: 1190px;
+  margin-left: 80px;
+  margin-top: 80px;
+  opacity: 0;
+  transition: all 1s;
+}
+.cc img {
+  box-shadow: 3px 3px 20px #959595;
+  position: absolute;
+  z-index: 1 ;
+  margin-top: 0;
+  margin-left: -200px;
+  width: 385px;
+  transition: all 1s;
+}
+.cc .txtLeft {
+  position: absolute;
+  width: 600px;
+  height: 280px;
+  background-color: #e7e7e1;
+  top: 550px;
+  left: 690px;
+  transition: all 1s;
+}
+.cc .txtLeft p {
+  position: absolute;
+  z-index: 123;
+  top: 90px;
+  left: 130px;
+  font-family: '΢���ź�';
+}
+.cc .txtLeft span {
+  color: #b28b60;
+  font-size: 16px;
+  position: absolute;
+  top: 220px;
+  left: 420px;
+}
+.dd {
+  position: absolute;
+  width: 1190px;
+  opacity: 0;
+  transition: all 1s;
+  height: 430px;
+}
+.dd img {
+  box-shadow: 3px 3px 20px #959595;
+  position: absolute;
+  z-index: 1 ;
+  right: -275px;
+  top: 400px;
+  transition: all 1s;
+}
+.dd .txtRight {
+  width: 510px;
+  height: 260px;
+  background-color: #e7e7e1;
+  position: absolute;
+  top: 460px;
+  left: 600px;
+  transition: all 1s;
+}
+.dd .txtRight p {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  font-family: '΢���ź�';
+  text-align: right;
+}
+.dd .txtRight span {
+  color: #b28b60;
+  font-size: 16px;
+  position: absolute;
+  top: 200px;
+  right: 280px;
+}
+.txtLeft > div {
+  position: absolute;
+  border-top: 2px solid #000000;
+  width: 0;
+  top: 150px;
+  left: 130px;
+  transition: all 1s;
+}
+.txtRight > div {
+  position: absolute;
+  border-top: 2px solid #000000;
+  width: 0;
+  top: 130px;
+  right: 70px;
+  transition: all 1s;
+}

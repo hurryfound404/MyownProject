@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+.T {
+  margin-top: 100px;
+  margin-left: 340px;
+}
+#L {
+  width: 400px;
+  height: 300px;
+  margin-top: 70px;
+  margin-left: 100px;
+}
+#TS {
+  text-align: center;
+}
+#P {
+  font-size: 30px;
+}
+.U {
+  color: #b28b60;
+  font-size: 30px;
+  text-align: center;
+}
+#YH {
+  width: 250px;
+  height: 18px;
+  margin-left: 75px;
+  margin-top: 40px;
+}
+#M {
+  width: 250px;
+  height: 18px;
+  margin-left: 75px;
+  margin-top: 40px;
+}
+#DL {
+  width: 276px;
+  height: 40px;
+  border: 0;
+  color: white;
+  background-color: black;
+  margin-left: 75px;
+  margin-top: 40px;
+}
+.line_cxx {
+  position: absolute;
+  top: 41%;
+  left: 49%;
+  height: 355px;
+  width: 1px;
+  background-color: #999999;
+}
+#R {
+  width: 400px;
+  height: 300px;
+  margin-left: 700px;
+  margin-top: -300px;
+}
+#ZC {
+  font-size: 36px;
+}
+#TQ {
+  font-size: 13px;
+  margin-top: 40px;
+  color: darkgray;
+}
+.Z {
+  width: 300px;
+  height: 40px;
+  color: #232321;
+  margin-top: 50px;
+  border: 1px solid grey;
+  background-color: white;
+  cursor: pointer;
+}

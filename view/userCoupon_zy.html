@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIFE个人中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+<div class="contents_zy">
+    <!--导航-->
+    <%-include g-nav.html%>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <%-include userBnner-commen.html%>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <%-include userLeft-tab-commen.html%>
+                <div class="main_box_zy">
+                    <span>我的优惠券</span>
+                    <span> <a href="userEdit_zy.html">&#xe78a;</a></span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <div class="tabChange_content_zy">
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--收货人地址-->
+                            <label>优惠券详情</label>
+                        </div>
+                        <!--优惠券详情-->
+                        <!--一排2张-->
+                        <%for(var i=0;i<datacar1.length;i++){%>
+                        <div class="userSave_moneyDiv_zy">
+                            <!--优惠券-->
+                            <%for(var i=0;i<datacar1.length;i++){%>
+                            <div class="moneyPapers_zy">
+                                <div class="left_div_zy">
+                                    <h3><%=datacar1[i].coupon_amount%>￥</h3>
+                                    <p>满<%=datacar1[i].coupon_rule%>可以使用</p>
+                                </div>
+                                <div class="right_div_zy">
+                                    <h6>可购买本店所有商品</h6>
+                                    <!--<p><%=datacar1[i].coupon_creatDate%></p>-->
+                                    <%if(datacar1[i].coupon_state==1){%>
+                                    <a href="">立即使用</a>
+                                    <%}else if(datacar1[i].coupon_state==-1){%>
+                                    <a href="">优惠券过期</a>
+                                    <%}else{%>
+                                    <a href="">已经使用</a>
+                                    <%}%>
+                                </div>
+                            </div>
+                            <%}%>
+                        </div>
+                        <%}%>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+<script type="text/javascript" src="js/g-nav.js"></script>
+</body>
+
+</html>

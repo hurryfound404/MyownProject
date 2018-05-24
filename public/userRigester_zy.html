@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        #success {
+            position: fixed;
+            color: #fff;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px 100px;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            z-index: -999;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--导航部分-->
+    <div class="contents_zy">
+        <nav>
+            <ul class="userNav_zy">
+                <li>
+                    <a href="index.html">
+                        <img src="images/userimgs/logo2.png" height="65" width="65" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--内容部分-->
+        <div class="section1_zy">
+            <div class="w registDiv_zy">
+                <!--<div class="iconDiv">-->
+                <!--<img src="images/styleicon.png" height="70" width="500"/>-->
+                <!--</div>-->
+                <div class="registForm_zy_div">
+                    <!--表单-->
+                    <form action="" class="regForm_zy" method="post">
+                        <!--姓名-->
+                        <p>用户名</p>
+                        <input type="text" placeholder="请输入您的用户名" name="username" id="username" class="input-css-zy">
+                        <p>设置密码</p>
+                        <input type="password" placeholder="请输入密码" name="pwd" id="pwd" class="input-css-zy">
+                        <!--手机号-->
+                        <p>您的手机号</p>
+                        <input type="text" placeholder="请输入您的手机号码" name="tell" id="tell" class="input-css-zy">
+                        <!--短信验证-->
+                        <p>短信验证</p>
+                        <div class="ly_change">
+                            <input type="text" placeholder="请输入有效验证码" name="yznum" id="yznum" class="input-css-zy phoneChecks_zy">
+                            <!--获取手机验证按钮-->
+                            <button class="bnt-zy buttonCss_zy" id="tellnum" type="button">获取手机验证码</button>
+                        </div>
+                        <input type="checkbox" class="checkboxCss_zy" id="checkboxCss_zy">
+                        <span>我同意依照本使用条款和隐私政策对我的个人信息
+                            <br> 进行收集和使用; 我已阅读并确认被给予充分机会
+                            <br>理解该使用条款和隐私政策的内容。</span>
+                        <!--注册按钮-->
+                        <button type="button" class="bnt-zy justGo_zy" id="moveP">立即注册</button>
+                        <!--图片-->
+                        <div class="moterP_zy" id="moter">
+                            <img src="images/userimgs/moter1.png" height="500" width="210" />
+                        </div>
+                        <!--图片上的文字-->
+                        <div class="moterText_zy">
+                            <img src="images/userimgs/styleicon.png" height="50" width="300" />
+                        </div>
+                    </form>
+                    <!--竖线-->
+                    <div class="line_zy"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="success"></div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <!--<script src="js/bootstrap.js"></script>-->
+    <script src="js/userCenter_zy.js"></script>
+    <script src="js/ajax-g.js"></script>
+    <script src="js/mytool.js"></script>
+    <script>
+        $("#username").blur(function () {
+            var a = /^[0-9a-zA-Z]+$/;
+            var b = $(this).val();
+            if (a.test(b) == false) {
+                $(this).val("*请输入正确的格式或用户名已存在");
+                $(this).css("color", "red")
+            }
+        });
+        $("#username").click(function () {
+            $(this).val("");
+            $(this).css("color", "black")
+        });
+        $("#tell").blur(function () {
+            var a = /^[1][3|4|5|6|7|8][0-9]{9}$/;
+            var b = $(this).val();
+            if (a.test(b) == false) {
+                $(this).val("*请输入正确的格式");
+                $(this).css("color", "red")
+            }
+        });
+        $("#tell").click(function () {
+            $(this).val("");
+            $(this).css("color", "black")
+        });
+               $("#tellnum").click(function () {
+                   var tell = $("#tell").val();
+                   ajaxFn({
+                       "method": "get",
+                       "url": "/sendCode.do",
+                       "param": "tell=" + tell,
+                       "callback": function (xhr) {
+                           if(xhr.responseText=="发送成功"){
+                                $("#success").text("发送成功");
+                               console.log(("111"));
+                               setTimeout(function () {
+                                   animateLY($("#success")[0], { "zIndex": 999, "top": 200, "opacity": 100 }, function () {
+                                       setTimeout(function () {
+                                           animateLY($("#success")[0], { "top": 120, "opacity": 0 }, function () {
+                                               $("#success").css({ "zIndex": -999 });
+                                           })
+                                       }, 100)
+                                   });
+                               }, 200)
+                           }
+                       }
+                   })
+               });
+        $("#moveP").click(function () {
+            var username = $("#username").val();//用户输入的账号
+            var pwd = $("#pwd").val();
+            var tell = $("#tell").val();
+            var yznum = $("#yznum").val();
+            var checkbox = $("#checkboxCss_zy").prop('checked');
+            // var param="username="+username+"&pwd="+pwd+"&tell="+tell+"&yznum="+yznum;
+            if (checkbox == true) {
+                // ajaxFn({
+                //     "method":"post",
+                //     "url":"/userSea.do",
+                //     "param":param,
+                //     "callback":function (xhr) {
+                //         alert(xhr.responseText)
+                //     }
+                // })
+                // console.log(111);
+                $.ajax({
+                    type: "POST",
+                    url: "/userSea.do",
+                    data: { username: username, pwd: pwd, tell: tell, yznum: yznum },
+                    success: function (data) {
+                        console.log("111");
+                        console.log(data);
+                        if (data == "success") {
+                            window.location.href = "index.html"
+                        } else {
+                            $("#success").text("用户名已存在");
+                            // console.log(("111"));
+                            setTimeout(function () {
+                                animateLY($("#success")[0], { "zIndex": 999, "top": 200, "opacity": 100 }, function () {
+                                    setTimeout(function () {
+                                        animateLY($("#success")[0], { "top": 120, "opacity": 0 }, function () {
+                                            $("#success").css({ "zIndex": -999 });
+                                        })
+                                    }, 100)
+                                });
+                            }, 200)
+
+                        }
+                        // window.location.href = "index.html"
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

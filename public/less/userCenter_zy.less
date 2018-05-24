@@ -1,0 +1,639 @@
+//公共样式部分
+@color-nav:#232321;
+@color:#b28b60;
+@font-sizeMax:36px;
+@font-sizeSec:30px;
+@font-sizeMiddle:16px;
+@font-sizeMin:13px;
+@input-sizeHeight:30px;
+@input-sizeWith:280px;
+@button-sizeWith:40px;
+a{
+  color:#ffffff ;
+}
+
+//主要内容
+.contents_zy{
+  width: 100%;
+  height: auto;
+}
+//导航模板样式开始
+.userNav_zy{
+  width: 100%;
+  height:100px;
+  background-color: #232321;
+  overflow: hidden;
+  li{
+    width: 65px;
+    height: 65px;
+    margin: 0  auto;
+    margin-top: 1%;
+  }
+}
+.section1_zy{
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  .registDiv_zy{
+    position: relative;
+    //border: 1px solid red;
+    height: 497px;
+     .iconDiv{
+       position: absolute;
+       top: -18%;
+       left: 30%;
+     }
+    .registForm_zy_div{
+      //border: 1px solid red;
+      position: relative;
+      margin:  0 auto;
+      width: 60%;
+      height: 548px;
+      margin-top: 8%;
+    }
+    }
+  }
+//用户注册表单样式
+//后面可以复用这个表单样式
+.regForm_zy{
+  //border: 1px solid #48ff21;
+  background-color: #ffffff;
+  z-index: 1;
+  height: 532px;
+  width: 50%;
+  input{
+    margin-top: 2%;
+    width:@input-sizeWith ;
+  }
+}
+.regForm_zy {
+  p {
+    font-weight: bold;
+    margin-top: 2%;
+    font-size: @font-sizeMin;
+  }
+  .phoneChecks_zy {
+    width: 150px;
+  }
+  .buttonCss_zy {
+    position: absolute;
+    height: 35px;
+    left: 22%;
+    top: 222px;
+  }
+  .checkboxCss_zy {
+    margin-top: -10%;
+    height: 15px;
+    width: 15px;
+  }
+}
+.regForm_zy{
+  span{
+    color: #999999;
+    display: inline-block;
+    margin-top: 2%;
+  }
+  .justGo_zy{
+    position: absolute;
+    left: 0;
+    top: 66%;
+    width:@input-sizeWith;
+    height:@button-sizeWith ;
+  }
+}
+.regForm_zy{
+  //模特图片样式
+  .moterP_zy{
+    position: absolute;
+    left: 220px;
+    top: 0%;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.8s linear;
+  }
+  .moterText_zy{
+    font-family: "Times New Roman";
+    position: absolute;
+    left: 374px;
+    top: 260px;
+    z-index: 1;
+    transition: all 0.8s linear;
+    img{
+      opacity: 0;
+      transition: all 0.8s linear;
+    }
+  }
+}
+//竖线
+.line_zy{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 428px;
+  width: 1px;
+  background-color: #999999;
+}
+
+//个人中心样式开始——————————————————
+.mainCtent_zy{
+  position: relative;
+  height: auto;
+  //banner部分
+  .userBnner_zy {
+    //border: 1px solid red;
+    box-shadow: 1px 0 10px 1px #2B333B;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/userimgs/MOBILE2.jpg");
+    //logo字体
+    span{
+      position: absolute;
+      top: 13%;
+      left: 44%;
+      color:@color ;
+      font-size:@font-sizeMax;
+      font-family: "Times New Roman";
+    }
+    //用户名
+    .userName_zy{
+      position: absolute;
+      top: 29%;
+      left: 22%;
+      color:#ffffff ;
+      font-size:@font-sizeSec;
+    }
+    //用户头像和文字
+    .userPhoto_zy {
+      position: absolute;
+      left: 7%;
+      top: 25%;
+      height: 150px;
+      width: 150px;
+      overflow: hidden;
+      border-radius: 75px;
+      box-shadow: 1px 0 10px 1px #2B333B;
+      &:before{
+        content:"" ;
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 75px;
+        background-color:@color-nav ;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+      }
+
+      span{
+        font-size:@font-sizeMax ;
+        color: #ffffff;
+        position: absolute;
+        left: 38%;
+        top: 47%;
+        font-weight: bold;
+        font-family: "my-font";
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        cursor: pointer;
+      }
+      p{
+        color: #ffffff;
+        position: absolute;
+        left: 26%;
+        top: 68%;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        cursor: pointer;
+
+      }
+      &:hover span{
+        opacity: 1;
+      }
+      &:hover p{
+        opacity: 1;
+      }
+      &:hover:before{
+        opacity: 0.5;
+
+      }
+    }
+    //导航条
+    .user_navBox_zy{
+      //position: absolute;
+      margin-top: 34%;
+      height: 110px;
+      width: 100%;
+      color: #ffffff;
+      background-color: @color-nav;
+    }
+  }
+  //主内容部分
+  .userContent_box_zy{
+    overflow: hidden;
+    margin-top: 6px;
+    background-color: #F3F3F3;
+    width: 100%;
+    height: 1000px;
+    //border: 1px solid red;
+    .userContent_main_zy{
+      position: relative;
+      width: 90%;
+      height: 800px;
+      margin: 0 auto;
+      margin-top: 5%;
+      //左边导航部分样式
+      .left_ul_zy{
+        height: auto;
+        width:177px;
+        color: #ffffff;
+        font-size:@font-sizeMiddle ;
+        ul{
+          li{
+            text-align: center;
+            line-height:@button-sizeWith ;
+            background-color:@color-nav ;
+            border: 1px solid #F3F3F3;
+            margin-top: 5%;
+            height:@button-sizeWith;
+            width:176px;
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.1s linear;
+            &:hover{
+              background-color: #ffffff;
+              color:@color-nav ;
+              border-color: @color-nav;
+              outline: 0;
+              a{
+                color: @color-nav;
+                text-decoration: none;
+              }
+            }
+          }
+
+        }
+      }
+      //右边主内容样式切换时就切换以下内容
+      .main_box_zy{
+        height: 750px;
+        width: 80%;
+        position: relative;
+        margin-top: -31%;
+        margin-left: 20%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        span{
+          display: inline-block;
+          margin-top: 2%;
+          margin-left: 2%;
+          font-size:@font-sizeSec;
+        }
+        span:nth-child(2){
+          font-family:"my-font";
+          float: right;
+          margin-right: 1%;
+          transform: scale(1,1);
+          transition: all 0.3s linear;
+          cursor: pointer;
+          &:hover {
+
+            transform: rotate(180deg)scale(2,2);
+          }
+          a{
+            &:hover{
+              color:@color;
+            }
+            color:@color-nav;
+            text-decoration: none;
+          }
+        }
+        //横线
+        .lineX_zy{
+          background-color:#999999;
+          height: 1px;
+          width: 100%;
+          margin-top: 2%;
+
+        }
+        .tabChange_content_zy{
+          margin-top: 1%;
+          margin-left: 3%;
+          //border: 1px solid red;
+          width: 97%;
+          height: auto;
+          //个人信息表————————————————————--
+          ul{
+            li{
+              text-align: center;
+              width: 15%;
+              height:40px ;
+              line-height: 40px;
+              list-style: none;
+              margin-top: 2%;
+              font-size:@font-sizeMiddle;
+              cursor: pointer;
+            }
+          }
+          ul:nth-child(2){
+            position: absolute;
+            width: 88%;
+            height: 230px;
+            left: 14%;
+            top: 63px;
+            li{
+              text-align: left;
+
+            }
+          }
+          //个人中心地址管理样式————————————————
+          //灰色横条样式
+          .childNav1_zy{
+            margin-top: 1%;
+            background-color: #E4E4E4;
+            width: 100%;
+            height: @button-sizeWith;
+            label{
+              margin-left: 1%;
+              line-height:@button-sizeWith ;
+              font-size:@font-sizeMiddle ;
+            }
+          }
+          .adressForm_zy{
+            .leftForm{
+              width: 50%;
+              height: 200px;
+              //border: 1px solid red;
+              float: left;
+              margin-top: 1%;
+            }
+            p{
+              margin-top: 2%;
+              font-weight: bold;
+              font-size: @font-sizeMin;
+            }
+            input{
+              margin-top: 2%;
+              width:@input-sizeWith ;
+            }
+            .addSave_zy{
+              margin-top: 2%;
+              width:110px;
+              height:@button-sizeWith;
+            }
+            select{
+              width: 90px;
+              margin-top: 2%;
+              font-size: @font-sizeMin;
+            }
+            .rightForm{
+              width: 50%;
+              height: 200px;
+              //border: 1px solid red;
+              float: right;
+              margin-top: 1%;
+            }
+          }
+          .childNav2_zy{
+            background-color: #E4E4E4;
+            width: 100%;
+            height: @button-sizeWith;
+            margin-top: 2%;
+            label{
+              margin-left: 1%;
+              line-height:@button-sizeWith ;
+              font-size:@font-sizeMiddle ;
+            }
+          }
+          .add_adressForm_zy{
+            p{
+              margin-top: 2%;
+              font-weight: bold;
+              font-size: @font-sizeMin;
+            }
+            select{
+              width: 90px;
+              margin-top: 2%;
+              font-size: @font-sizeMin;
+            }
+            input{
+              margin-top: 2%;
+              width:@input-sizeWith ;
+            }
+            .addSave_zy{
+              margin-top: 2%;
+              width:110px;
+              height: @button-sizeWith;
+            }
+
+          }
+          //订单页面样式开始——————————————————-
+          .tab_dl_zy{
+            .selectInpute_zy{
+              float: right;
+              width:150px;
+              margin-right: 15%;
+              margin-top: 0;
+            }
+            dt{
+              border-bottom: 1px solid #999999;
+              width: 15%;
+              height:40px ;
+              line-height: 40px;
+              list-style: none;
+              font-size:@font-sizeMiddle;
+              cursor: pointer;
+              float: left;
+              font-weight: normal;
+              &:hover{
+                color:@color ;
+                font-weight: bold;
+              }
+            }
+            .buttonSelect_zy{
+              float: right;
+              margin-right: 9%;
+              margin-top: -4%;
+            }
+          }
+          //表格样式
+          .tables_zy{
+            input[type="checkbox"]{
+              margin-top: -2px;
+            }
+            //text-align: center;
+            margin-top: 2%;
+            //border: 1px solid #dddddd;
+            thead{
+              background-color: #E4E4E4;
+            }
+            tr{
+              td{
+                font-size:@font-sizeMin ;
+              }
+            }
+          }
+          //购物车页面和用户收藏样式共用————————————————
+          .carTab_ul_zy{
+            .car_buttonSelect_zy{
+              float: right;
+              margin-right: -24%;
+              margin-top: 0;
+            }
+            .carSelectInpute_zy{
+              float: right;
+              width:150px;
+              margin-right: 15%;
+              margin-top: 0;
+            }
+          }
+          //底部横条样式
+          .car_childNav2_zy{
+            input[type="checkbox"]{
+              margin-top: -2px;
+            }
+            margin-top: 1%;
+            background-color: #E4E4E4;
+            width: 100%;
+            height: @button-sizeWith;
+            label{
+              font-size:@font-sizeMin ;
+            }
+            .car_buttomButton_zy{
+              margin-left: 82%;
+              height: @button-sizeWith;
+              width: auto;
+            }
+
+          }
+          //修改密码样式-----------------------------------------
+          .changePwd_zy{
+            input{
+              margin-top: 2%;
+              width:@input-sizeWith ;
+            }
+            p {
+              font-weight: bold;
+              margin-top: 2%;
+              font-size: @font-sizeMin;
+            }
+            .pwd_phoneChecks_zy{
+              width: 150px;
+
+            }
+            .pwd_get_phone_zy{
+              position: absolute;
+              height: 35px;
+              left: 21%;
+              top: 413px;
+            }
+            .savePwd_zy{
+              width: 100px;
+              margin-top: 2%;
+            }
+
+          }
+          //优惠券样式
+          .userSave_moneyDiv_zy{
+            margin-top: 2%;
+            width: 100%;
+            //border: 1px solid red;
+            height: 100px;
+            //左边的优惠卷
+            .moneyPapers_zy{
+              float: left;
+              margin-right: 1%;
+              cursor: pointer;
+              box-shadow: 0 3px 7px 0 #c4c4c4;
+              position: relative;
+              border: 1px solid #999999;
+              height: 100px;
+              width: 43%;
+              display: inline-block;
+
+              transition: margin-top 0.3s linear;
+              //一张优惠卷的左右部分
+              .left_div_zy{
+                text-align: center;
+                color: @color-nav;
+                background-color:@color;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 40%;
+                height: 100px;
+                h3{
+                  font-size:@font-sizeSec ;
+                  margin-top: 5%;
+                  color:@color-nav;
+                }
+                p{
+                  font-size:@font-sizeMin;
+                  margin-top: 20%;
+                }
+            }
+              .right_div_zy{
+                position: absolute;
+                left: 41%;
+                top: 0;
+                //border-left: 1px solid #999999;
+                width: 59%;
+                height: 100px;
+                h6{
+                  font-size:@font-sizeMin;
+                  margin-top: 5%;
+                }
+                p{
+                  font-size:@font-sizeMin;
+                  margin-top: 5%;
+                }
+                a{
+                  color:@color-nav ;
+                  position: absolute;
+                  left: 70%;
+                  top: 67%;
+                  width: auto;
+                  height: auto;
+                  &:hover{
+                    color: @color;
+                    font-weight: bold;
+                  }
+                }
+              }
+              &:hover {
+                margin-top: -1%;
+
+              }
+
+          }
+            //右边的优惠券
+            .rightpaper_zy{
+              border: 1px solid #999999;
+              height: 100px;
+              width: 40%;
+              display: inline-block;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

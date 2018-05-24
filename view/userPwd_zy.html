@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIFE个人中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+<div class="hiddenBody"></div>
+<div class="massageSucsess">
+    <div class="massageSure_title_zy">
+        <span>来自Ulife的消息</span>
+        <span class="exsitSureMassage">&#xe60e;</span>
+    </div>
+    <!--横线-->
+    <div class="massageSure_line_x"></div>
+    <div class="massageSure_content_zy">
+        <span>操作成功！</span>
+        <button class="bnt-zy updateOk">确认</button>
+    </div>
+</div>
+<div class="contents_zy">
+    <!--导航-->
+    <%-include g-nav.html%>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <%-include userBnner-commen.html%>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <%-include userLeft-tab-commen.html%>
+                <div class="main_box_zy">
+                    <span>修改密码</span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <!--收货人信息表单-->
+                    <div class="tabChange_content_zy">
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--收货人地址-->
+                            <label>修改我的密码</label>
+                        </div>
+                        <!--修改密码表单-->
+                        <div  class="changePwd_zy">
+                            <p>输入旧密码</p>
+                            <input type="password" placeholder="请输入密码" class="input-css-zy oldPwd"><i class="oldCompare">输入的密码有误或为空</i>
+                            <p>设置新密码</p>
+                            <input type="password" placeholder="请输入密码" class="input-css-zy newPwd"><i class="newCompare">输入的密码为空或有误</i>
+                            <!--手机号-->
+                            <p>确认密码</p>
+                            <input type="password" placeholder="请确认您的密码" class="input-css-zy confirmPwd"><i class="confirmCompare">输入的密码不匹配</i>
+                            <!--短信验证-->
+                            <p>短信验证</p>
+                            <input type="text" placeholder="请输入有效验证码" class="input-css-zy pwd_phoneChecks_zy">
+                            <!--获取手机验证按钮-->
+                            <button class="bnt-zy pwd_get_phone_zy" >获取手机验证码</button>
+                            <!--注册按钮-->
+                            <button class="bnt-zy savePwd_zy" id="updatePwd">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+<script type="text/javascript" src="js/g-nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,544 @@
+body {
+  background-color: #FCFCFC;
+}
+.content {
+  height: 920px;
+  overflow: hidden;
+  position: relative;
+  background-color: #FCFCFC;
+}
+.content .left {
+  width: 800px;
+  height: 550px;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  border-right: 1px solid #b28b60;
+  margin: 40px 0 0 0;
+  background: #FCFCFC;
+}
+.content .left div {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+}
+.content .left div img {
+  width: 500px;
+  height: 500px;
+}
+.content .right {
+  width: 300px;
+  height: 600px;
+  float: right;
+  margin: 40px 0 0 0;
+}
+.content .right h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #b28b60;
+}
+.content .right .choose {
+  width: 140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.content .right .choose .btnly {
+  width: 140px;
+  height: 40px;
+  display: block;
+  margin-top: 33px;
+}
+.content .pattern {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  background-color: #FCFCFC;
+  overflow: hidden;
+  display: none;
+}
+.content .pattern h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .pattern .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .pattern div {
+  width: 220px;
+  height: 160px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.content .pattern div img {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+}
+.content .pattern div p {
+  color: #b28b60;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+.content .braces {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  background-color: #FCFCFC;
+  display: none;
+  overflow: hidden;
+}
+.content .braces h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .braces .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .braces div {
+  width: 220px;
+  height: 160px;
+  margin: 20px auto;
+  position: relative;
+}
+.content .braces div img {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+}
+.content .braces div p {
+  color: #b28b60;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+.content .tiptoe {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  background-color: #FCFCFC;
+  display: none;
+  overflow: hidden;
+}
+.content .tiptoe h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .tiptoe .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .tiptoe div {
+  width: 220px;
+  height: 160px;
+  position: relative;
+  margin: 20px auto;
+}
+.content .tiptoe div img {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+}
+.content .tiptoe div p {
+  color: #b28b60;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-align: center;
+}
+.content .heel {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  background-color: #FCFCFC;
+  display: none;
+  overflow: hidden;
+}
+.content .heel h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .heel .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .heel div {
+  width: 220px;
+  height: 160px;
+  margin: 20px auto;
+  position: relative;
+}
+.content .heel div img {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+}
+.content .heel div p {
+  color: #b28b60;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+.content .decorate {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  background-color: #FCFCFC;
+  display: none;
+  overflow: hidden;
+}
+.content .decorate h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .decorate .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .decorate div {
+  width: 220px;
+  height: 160px;
+  margin: 20px auto;
+  position: relative;
+}
+.content .decorate div img {
+  width: 220px;
+  height: 120px;
+  cursor: pointer;
+}
+.content .decorate div p {
+  color: #b28b60;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+.content .hue {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  /* background-color: #F9F9F9; */
+  display: none;
+}
+.content .hue h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.content .hue .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.content .hue .panel {
+  width: 250px;
+  height: 65px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 70px;
+}
+.content .hue .panel h6 {
+  float: left;
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.content .hue .panel .white {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  float: left;
+  cursor: pointer;
+  border: 1px solid #b28b60;
+  margin: 1px 0 0 20px;
+}
+.content .hue .panel .red {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  float: left;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.content .hue .rear-cover {
+  width: 250px;
+  height: 65px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.content .hue .rear-cover h6 {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.content .hue .rear-cover .white {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  float: left;
+  margin-left: 31px;
+  cursor: pointer;
+}
+.content .hue .rear-cover .red {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  float: left;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.content .hue .shoe-heel {
+  width: 250px;
+  height: 65px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.content .hue .shoe-heel h6 {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.content .hue .shoe-heel .white {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  float: left;
+  margin-left: 31px;
+  cursor: pointer;
+}
+.content .hue .shoe-heel .red {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  float: left;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.menu {
+  position: absolute;
+  top: 255px;
+  left: 150px;
+  width: 500px;
+  height: 500px;
+  display: none;
+  cursor: move;
+  overflow: hidden;
+}
+.menu .list {
+  width: 600px;
+  height: 500px;
+}
+.menu .list img {
+  width: 500px;
+  height: 500px;
+}
+.zuo {
+  font-family: my-font;
+  position: absolute;
+  top: 450px;
+  left: 400px;
+  color: #DFC377;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: .5;
+}
+.you {
+  font-family: my-font;
+  position: absolute;
+  top: 450px;
+  left: 445px;
+  color: #DFC377;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: .5;
+}
+.tuo {
+  position: absolute;
+  top: 450px;
+  left: 420px;
+  color: #DFC377;
+  cursor: pointer;
+  opacity: .5;
+}
+.content .logo-ss {
+  text-align: center;
+  padding-top: 20px;
+  height: 145px;
+}
+.content .logo-ss h1 {
+  height: 65px;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.content .logo-ss span {
+  color: #B28B60;
+  font-size: 36px;
+  margin: 0 10px 0 0px;
+}
+
+.content .logo-ss p {
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+/* .logo {
+  text-align: center;
+  margin: 50px 0 0 0;
+  letter-spacing: 2px;
+} */
+.logo span {
+  font-weight: normal;
+  color: #B28B60 ;
+  letter-spacing: 5px;
+}
+#box {
+  width: 50px;
+  height: 50px;
+  cursor: move;
+  position: absolute;
+  top: 300px;
+  left: 1020px;
+  background-image: url("../images/customs/zuan2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+#box img {
+  width: 50px;
+  height: 50px;
+  cursor: move;
+}
+#coor {
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  cursor: se-resize;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.embellish {
+  position: absolute;
+  top: 200px;
+  left: 888px;
+  width: 300px;
+  height: 600px;
+  /* background-color: #F9F9F9; */
+  display: none;
+  overflow: hidden;
+}
+.embellish h3 {
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.embellish .close {
+  font-family: my-font;
+  position: absolute;
+  top: 1px;
+  left: 280px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.embellish p {
+  position: absolute;
+  top: 200px;
+  left: 95px;
+  color: #b28b60;
+  letter-spacing: 1px;
+}
+.embellish #fileUpload {
+  position: absolute;
+  top: 300px;
+  left: 80px;
+}
+.pattern-div1 {
+  outline: 1px solid #b28b60;
+}
+.braces-div1 {
+  outline: 1px solid #b28b60;
+}
+.tiptoe-div1 {
+  outline: 1px solid #b28b60;
+}
+.heel-div1 {
+  outline: 1px solid #b28b60;
+}
+.decorate-div1 {
+  outline: 1px solid #b28b60;
+}
+#fileUpload{
+  color: red;
+  /* padding: 10px */
+}
+
+.content .gobuy {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  height: 40px;
+}

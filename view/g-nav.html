@@ -1,0 +1,86 @@
+
+    <header id="g-nav">
+        <div class="g-nav-top w">
+            <div class="nav-top-left fl">
+                <%if(user!=""){%>
+                <span id="nav-user"><i>欢迎</i>，<%=user.user_loginName%>回来！</span><a href="userCenter_zy.html" id="user-center">个人中心</a><a href="/exit.do" id="exit-user">退出</a>
+                <%}else{%>
+                <a href="personal-Load.html" id="nav-login">登录</a>/<a href="userRigester_zy.html" id="nav-register">注册</a>
+            <%}%>
+            </div>
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/g-nav/logo.png" alt=""/>
+                    </a>
+                </h1>
+            </div>
+            <div class="nav-top-right fr">
+                <div class="search fl">
+                    <input type="text" name="nav-search" id="nav-search"/>
+                    <button id="search-btn">&#xe609;</button>
+                </div>
+                <div class="mall-car fr">
+                    <a href="#" id="mall-car-btn">&#xe6d7;</a>
+                    <%if(datacar!=""){%>
+                    <div id="car-message" class="car-message-hasgoods">
+                        <%}else{%>
+                        <div id="car-message" class="car-message-notgoods">
+                            <%}%>
+                        <% var usercarNum = 0%>
+                        <%if(datacar!=""){%>
+                        <p>最近您加入的商品</p>
+                        <ul id="user-car-message">
+                            <% for(var i=0;i<datacar.length;i++){%>
+                            <% usercarNum += datacar[i].sc_amount%>
+                            <li class="clearfix" myid="<%=datacar[i].sc_id%>">
+                                <img class="user-car-goods-img" src="<%=datacar[i].prourl%>" alt=""/>
+                                <div class="user-car-goods-name"><%=datacar[i].proname%></div>
+                                <div class="user-car-goods-price">
+                                    <div class="user-goods-price-message">
+                                        <span class="user-goods-price">￥<%=datacar[i].pro_price%></span>x<i><%=datacar[i].sc_amount%></i>
+                                    </div>
+                                    <span class="user-goods-scbtn">删除</span>
+                                </div>
+                            </li>
+                            <%}%>
+                        </ul>
+                        <a class="go-user-goodscar btnly" href="shoppingCar.html" target="_top">去购物车</a>
+                        <%}else{%>
+                        <span>购物车中还没有商品，赶紧选购吧！</span>
+                       <%}%>
+                    </div>
+                    <span id="car-num"><%=usercarNum%></span>
+                </div>
+            </div>
+        </div>
+        <div class="g-nav-bottom w">
+            <ul class="clearfix">
+                <li class="first-li"><span>首页</span><a href="index.html">ULIFE</a></li>
+                <li class="line">/</li>
+                <li><span>时尚搭配</span><a href="ElegantCollocation.html">FASION</a></li>
+                <li class="line">/</li>
+                <li><span>产品系列</span><a href="product.html">GOODS</a></li>
+                <li class="line">/</li>
+                <li><span>爱情专属</span><a href="wedding-shoes.html">ULOVE</a></li>
+                <li class="line">/</li>
+                <li><span>时尚秀场</span><a href="fashionshow.html">SHOW</a></li>
+                <li class="line">/</li>
+                <li><span>关于我们</span><a href="AboutUs.html">ABOUT</a></li>
+            </ul>
+        </div>
+
+        <div id="tel-code">
+            <span>尊享移动端<br>购物体验</span>
+        </div>
+        <div id="go-top">&#xe610;</div>
+
+        <div class="mask-ly-nav"></div>
+        <div class="sc-delete-confirm-nav">
+            <p>主人，确定不要我了么？</p>
+            <div class="sc-delete-btn-nav">
+                <button id="sc-confirm-nav" class="btnly">确认</button>
+                <button id="sc-cancel-nav" class="btnly">取消</button>
+            </div>
+        </div>
+    </header>

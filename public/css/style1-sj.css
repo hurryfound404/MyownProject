@@ -1,0 +1,345 @@
+#container-sj {
+  font-size: 16px;
+}
+.daoHang {
+  background-color: #b28b60;
+  width: 1190px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+}
+.headline {
+  font-size: 32px;
+  color: #b28b60;
+  text-align: center;
+}
+.module-headline1 {
+  width: 1190px;
+  height: 120px;
+  padding: 10px 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.module-headline1 .headline-add {
+  text-align: center;
+  font-size: 16px;
+  Letter-spacing: 3px;
+}
+.module-headline1 p {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 36px;
+  height: 50px;
+  line-height: 50px;
+}
+.module-headline1 p span {
+  color: #000000;
+}
+.module-headline1 > p > span {
+  font-size: 28px;
+  margin-left: 10px;
+}
+.banner {
+  width: 1190px;
+  height: 580px;
+  margin: 0 auto;
+  background-image: url("../images/ElegantCollocation.img/777777.jpg");
+  background-size: 1190px 680px;
+  position: relative;
+  overflow: hidden;
+}
+.div1 {
+  width: 540px;
+  height: 230px;
+  background-color: black;
+  float: left;
+  position: absolute;
+  bottom: -400px;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: bottom 1s,opacity 3.5s;
+}
+.div1 img {
+  width: 250px;
+  margin-left: 85px;
+  margin-top: -30px;
+  transition: all 1s ;
+}
+.div1 .text1 {
+  font-size: 16px;
+  float: right;
+  margin-top: 40px;
+  /* margin-right: 5px; */
+}
+.div1 .text1 .price1 {
+  font-size: 28px;
+}
+.div1 .text1 p {
+  padding: 10px;
+  text-align: right;
+  color: white ;
+  margin-right: 10px;
+  /* margin-bottom: 20px; */
+}
+.price1 {
+  margin-left: 55px;
+}
+.price2 {
+  margin-left: 37px;
+}
+.price3 {
+  margin-left: 54px;
+}
+.price4 {
+  margin-left: 54px;
+}
+.hoverMove1 {
+  width: 540px;
+  height: 230px;
+  background-color: white;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 540px;
+  transition: all .7s;
+}
+.div1:hover .hoverMove1 {
+  left: 0;
+}
+.div1:hover .hr1 {
+  width: 80px;
+}
+.div2 {
+  width: 250px;
+  height: 340px;
+  background-color: black;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: -350px;
+  text-align: center;
+  opacity: 0;
+  transition: top 1s,opacity 3s,right 2s;
+}
+.div2 img {
+  position: absolute;
+  right: 310px;
+  top: 75px;
+  height: 140px;
+  transition: all 1s;
+}
+.div2 .text2 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 110px;
+  margin-left: 8px;
+}
+.div2 .text2 .price2 {
+  font-size: 30px;
+  margin-right: 45px;
+}
+.div2 .text2 p {
+  padding: 10px;
+  color: white;
+}
+.hoverMove2 {
+  width: 250px;
+  height: 339px;
+  background-color: white;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  right: -250px;
+  transition: all .7s;
+}
+.div2:hover .hoverMove2 {
+  right: 0;
+}
+.div2:hover .hr2 {
+  width: 80px;
+}
+.div3 {
+  width: 250px;
+  height: 280px;
+  background-color: black;
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 700px;
+  text-align: center;
+  opacity: 0;
+  overflow: hidden;
+  transition: bottom 1s,opacity 3.5s;
+}
+.div3 .text3 {
+  font-size: 16px;
+  margin-top: 100px;
+}
+.div3 .text3 .price3 {
+  margin-right: 35px;
+  font-size: 30px;
+}
+.div3 .text3 p {
+  padding: 10px;
+  color: white;
+}
+.hoverMove3 {
+  width: 250px;
+  height: 339px;
+  background-color: white;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  right: -250px;
+  transition: all .7s;
+}
+.div3:hover .hoverMove3 {
+  right: 0;
+}
+.div3:hover .hr3 {
+  width: 80px;
+}
+.div4 {
+  width: 540px;
+  height: 348px;
+  margin-top: -10px;
+  position: relative;
+  opacity: 0;
+  transition: margin-top 1s, opacity 3.5s;
+}
+.div4 img {
+  position: absolute;
+  left: 165px;
+  margin-top: 15px;
+  height: 320px;
+  transition: all 1s;
+}
+.div4 .text4 {
+  font-size: 16px;
+  position: absolute;
+  left: 350px;
+  top: 110px;
+  color: black;
+}
+.div4 .text4 .price4 {
+  font-size: 30px;
+}
+.div4 .text4 p {
+  font-size: 16px;
+  text-align: right;
+  padding: 10px;
+  color: black;
+}
+.div5 {
+  position: absolute;
+  bottom: -600px;
+  right: 300px;
+  opacity: 0;
+  transition: right 2s,bottom 1s,opacity 3.5s,transform 2s;
+}
+.div5 img {
+  height: 320px;
+}
+.mengceng {
+  width: 1190px;
+  height: 1000px;
+  background: rgba(255, 255, 255, 0.85);
+}
+.hr1 {
+  width: 40px;
+  border: 1px solid #b28b60;
+  margin-left: 65px;
+  position: absolute;
+  right: 30px;
+  bottom: 88px;
+  transition: all .7s;
+}
+.hr2 {
+  width: 40px;
+  border: 1px solid #b28b60;
+  margin-left: 65px;
+  margin-top: 20px;
+  position: absolute;
+  right: 75px;
+  transition: all .7s;
+}
+.hr3 {
+  width: 40px;
+  border: 1px solid #b28b60;
+  margin-left: 65px;
+  margin-top: 20px;
+  position: absolute;
+  right: 70px;
+  transition: all .7s;
+}
+.hr4 {
+  width: 40px;
+  border: 1px solid #b28b60;
+  margin-left: 68px;
+  margin-top: 20px;
+  transition: all .7s;
+  position: absolute;
+  right: 12px;
+}
+.div4:hover .hr4 {
+  width: 80px;
+}
+.module-headline2 {
+  margin: 0 auto;
+  width: 1190px;
+  height: 120px;
+  padding: 10px 0;
+}
+.module-headline2 div {
+  text-align: center;
+  font-size: 16px;
+  Letter-spacing: 3px;
+}
+.module-headline2 p {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 36px;
+  height: 50px;
+  line-height: 50px;
+}
+.module-headline2 span {
+  color: #000;
+  font-size: 28px;
+  margin-left: 10px;
+}
+#selectionCollocation {
+  width: 1190px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+#selectionCollocation .box {
+  padding: 22px 0 0 22px;
+  float: left;
+  transition: all 1s;
+}
+#selectionCollocation .box p {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #b28b60;
+}
+#selectionCollocation .box .pic {
+  padding-right: 15px;
+  width: 250px;
+  height: auto;
+  overflow: hidden;
+}
+#selectionCollocation .box .pic img {
+  width: 250px;
+  height: auto;
+  transition: all 1s;
+}
+.box:hover {
+  box-shadow: 6px 6px 6px #DDDDDD;
+  cursor: pointer;
+}
+.box:hover .oPic {
+  margin-top: -10px;
+}

@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#g-nav #tel-code {
+  visibility: hidden;
+}
+#g-nav #go-top {
+  visibility: hidden;
+}
+#CS-cxx {
+  font-size: 30px;
+  font-weight: bold;
+  color: #b28b60;
+  padding-top: 40px;
+}
+#DZ-cxx {
+  font-size: 13px;
+  float: left;
+  margin-top: 30px;
+}
+#GB-cxx {
+  font-size: 13px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+#JYM-cxx {
+  font-size: 13px;
+  float: left;
+  margin-top: 60px;
+  margin-left: -400px;
+}
+#JYM-cxx > span {
+  font-weight: bold;
+}
+#SJ-cxx {
+  font-size: 13px;
+  float: left;
+  margin-top: 60px;
+  margin-left: -90px;
+}
+#JE-cxx {
+  font-size: 13px;
+  float: left;
+  margin-left: 600px;
+  margin-top: 60px;
+}
+#JE-cxx > span {
+  font-size: 24px;
+  color: red;
+  margin: 10px;
+}
+#COR-cxx {
+  border: 1px solid gainsboro;
+  width: 100%;
+  margin-top: 100px;
+}
+#PPM-cxx {
+  margin: 20px;
+  height: 600px;
+  background-color: ghostwhite;
+}
+#PPM-cxx input {
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 16px;
+}
+#ZFB-cxx {
+  width: 287px;
+  margin: 0 auto;
+  margin-top: 70px;
+  visibility: hidden;
+}
+#wxImg-cxx {
+  width: 287px;
+  cursor: pointer;
+}
+#WX-cxx {
+  width: 287px;
+  margin: 0 auto;
+  margin-top: -287px;
+  visibility: hidden;
+}
+#YL-cxx {
+  width: 287px;
+  margin: 0 auto;
+  margin-top: -287px;
+}
+#WX-cxx {
+  width: 287px;
+  margin: 0 auto;
+  margin-top: -287px;
+  visibility: hidden;
+}
+#Num-cxx {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: -270px;
+  visibility: hidden;
+}
+#Num-cxx > p {
+  height: 30px;
+  line-height: 30px;
+}
+#PW-cxx {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  visibility: hidden;
+}
+#PW-cxx > p {
+  height: 30px;
+  line-height: 30px;
+}
+#Input-cxx {
+  height: 40px;
+  width: 300px;
+  font-size: 16px;
+}
+#But-cxx {
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+  width: 122px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: black;
+}
+#FG1 {
+  width: 96%;
+  margin: auto;
+  border: 1px solid gainsboro;
+  margin-top: 30px;
+}
+#FG2 {
+  width: 96%;
+  margin: auto;
+  border: 1px solid gainsboro;
+  margin-top: 70px;
+}

@@ -1,0 +1,268 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+#g-nav {
+  #tel-code{
+    visibility: hidden;
+  }
+  #go-top {
+    visibility: hidden;
+  }
+}
+//自定义变量
+@m_color:#b28b60;
+@m_margin:0 auto;
+@m_marginL:2%;
+body{
+  //width: 1190px;
+  //margin: @m_margin;
+  background-color: #f5f5f5;
+}
+@font-face {
+  font-family: "myfont";
+  src: url("../font/iconfont.svg");
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.woff");
+  src: url("../font/iconfont.ttf")
+}
+//上半部
+#Tit{
+  text-align: center;
+  background-color: #eeeeee;
+  h2{
+    color: @m_color;
+    font-size: 30px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+  }
+  p{
+    font-size: 13px;
+    padding: 8px 0;
+  }
+}
+//查询及展示
+#shop{
+  position: relative;
+  margin: @m_margin;
+  //搜索
+  #src{
+    background-color: #f5f5f5 ;
+    width: 18%;
+    height: 300px;
+    //position: fixed;
+    top: 114px;
+    float: left;
+    #filter{
+      width: 94%;
+      height: 100px;
+      background-color: white;
+      margin: @m_margin;
+      margin-top: 4%;
+      .fs{
+        border-bottom: 1px solid #f5f5f5f5;
+        height: 50%;
+        font-size: 13px;
+        line-height: 50px;
+        text-align: center;
+      }
+      #show{
+        font-size: 13px;
+        color: @m_color;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+    #filter1{
+      width: 94%;
+      background-color: white;
+      margin: @m_margin;
+      margin-top: 4%;
+      .Office{
+        border-bottom: 1px solid #f5f5f5f5;
+        height: 10%;
+        font-size: 13px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+  //商品列表
+  #shopL{
+    position: relative;
+    width: 78%;
+    float: right;
+    background-color: #f5f5f5 ;
+    #bannerS{
+      position: relative;
+      button{
+        width: 122px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        left: 40%;
+        bottom: 25%;
+      }
+      img{
+        width: 99%;
+        margin: @m_margin;
+        margin-right: 2%;
+        margin-top: 1%;
+      }
+    }
+    .shopList1{
+      margin-top: 1%;
+      margin-right: 1%;
+      float: left;
+      background-color: white;
+      width: 222px;
+      position: relative;
+      -webkit-transition: all .3s linear;
+      img{
+        width: 222px;
+        -webkit-transition: all .3s linear;
+      }
+      .description{
+        padding-top: 5%;
+        padding-bottom: 5% ;
+        margin-top: -2%;
+        p{
+          text-align:center;
+          padding-bottom: 3%;
+        }
+      }
+      .Collection{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        span{
+          font-family: myfont;
+          font-size: 18px;
+          margin: @m_margin;
+        }
+      }
+    }
+  }
+}
+.Collection:hover{
+  cursor: pointer;
+}
+#filter1:hover{
+  cursor: pointer;
+}
+.buybuy{
+  color: @m_color;
+  display: block;
+  text-align: center;
+}
+#Pages{
+  margin-top: 2%;
+  width: 300px;
+  float: right;
+  clear: both;
+  height: 80px;
+  text-align: center;
+  line-height: 40px;
+  div{
+    margin-right: 5px;
+    padding: 5px;
+    float: left;
+    height: 40px;
+    font-family: myfont;
+    text-decoration: none;
+    color: black;
+    border: 1px solid gainsboro;
+  }
+}
+.shopList1:hover{
+  box-shadow: 0 0 20px rgba(153,153,153,0.3);
+  -webkit-transform: translateY(-5px);
+}
+.btnly {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all ease-in-out .5s;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+  border: none;
+}
+.btnly:after {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .4);
+  top: 0;
+  right: -150%;
+  content: "";
+  visibility: hidden;
+  transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+}
+@keyframes btnHover {
+  0%{
+    right: -150%;
+    opacity: 1;
+  }
+  50%{
+    right:-20%;
+    opacity: 1;
+  }
+  100%{
+    right:-20%;
+    opacity: 0;
+  }
+}
+
+.btnly:hover::after {
+  -webkit-animation: btnHover ease 1.5s both;
+  -moz-animation: btnHover ease 1.5s both;
+  animation: btnHover ease 1.5s both;
+  visibility: visible;
+}
+.Office1{
+  background-color: #f5f5f5;
+  height: 10%;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+}
+//@-webkit-keyframes myamation {
+//  0%{
+//    -webkit-transform: translateY(0);
+//  }
+//  50%{
+//    -webkit-transform: translateY(300px);
+//  }
+//  100%{
+//    -webkit-transform: translateY(-150px);
+//  }
+//}
+//.img1:hover{
+//  content: url("../images/1listF.jpg");
+//}
+//弹出框
+#success{
+  position: fixed;
+  width: 25%;
+  //padding: 50px 100px;
+  height: 120px;
+  background-color: rgba(0,0,0,0.7);
+  margin: @m_margin;
+  //opacity: 0.;
+  -webkit-animation: myamation 3s;
+  z-index: 999;
+  left: 50%;
+  font-size: 26px;
+  text-align: center;
+  line-height: 120px;
+  color: #fff;
+  top: -120px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+}

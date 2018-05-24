@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/shoppingCar.css"/>
+</head>
+<body>
+    <header id="g-nav">
+        <div class="g-nav-top w">
+            <div class="nav-top-left fl">
+                <a href="#" id="nav-login">登录</a>/<a href="#" id="nav-register">注册</a>
+            </div>
+            <div class="logo">
+                <h1>
+                    <a href="#">
+                        <img src="images/logo.png" alt=""/>
+                    </a>
+                </h1>
+            </div>
+            <div class="nav-top-right fr">
+                <div class="search fl">
+                    <input type="text" name="nav-search" id="nav-search"/>
+                    <button id="search-btn">&#xe609;</button>
+                </div>
+                <div class="mall-car fr">
+                    <a href="#" id="mall-car-btn">&#xe6d7;</a>
+                    <span id="car-num">0</span>
+                    <div id="car-message" class="car-message-hasgoods">
+                        <!--<span>购物车中还没有商品，赶紧选购吧！</span>-->
+                        <p>最近您加入的商品</p>
+                        <ul id="user-car-message">
+                            <li class="clearfix">
+                                <img class="user-car-goods-img" src="images/nw11.JPG" alt=""/>
+                                <div class="user-car-goods-name">女士高跟鞋</div>
+                                <div class="user-car-goods-price">
+                                    <div class="user-goods-price-message">
+                                        <span class="user-goods-price">￥2,000</span>x<i>1</i>
+                                    </div>
+                                    <span class="user-goods-scbtn">删除</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img class="user-car-goods-img" src="images/nw11.JPG" alt=""/>
+                                <div class="user-car-goods-name">女士高跟鞋</div>
+                                <div class="user-car-goods-price">
+                                    <div class="user-goods-price-message">
+                                        <span class="user-goods-price">￥2,000</span>x<i>1</i>
+                                    </div>
+                                    <span class="user-goods-scbtn">删除</span>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img class="user-car-goods-img" src="images/nw11.JPG" alt=""/>
+                                <div class="user-car-goods-name">女士高跟鞋</div>
+                                <div class="user-car-goods-price">
+                                    <div class="user-goods-price-message">
+                                        <span class="user-goods-price">￥2,000</span>x<i>1</i>
+                                    </div>
+                                    <span class="user-goods-scbtn">删除</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="go-user-goodscar btnly" href="#" target="_blank">去购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="g-nav-bottom w">
+            <ul class="clearfix">
+                <li class="first-li"><span>首页</span><a href="#">ULIFE</a></li>
+                <li class="line">/</li>
+                <li><span>时尚搭配</span><a href="#">FASION</a></li>
+                <li class="line">/</li>
+                <li><span>产品系列</span><a href="#">GOODS</a></li>
+                <li class="line">/</li>
+                <li><span>爱情专属</span><a href="#">ULOVE</a></li>
+                <li class="line">/</li>
+                <li><span>时尚秀场</span><a href="#">SHOW</a></li>
+                <li class="line">/</li>
+                <li><span>关于我们</span><a href="#">ABOUT</a></li>
+            </ul>
+        </div>
+
+        <div id="tel-code">
+            <span>尊享移动端<br>购物体验</span>
+        </div>
+        <div id="go-top">&#xe610;</div>
+    </header>
+    <section>
+        <div class="shoppingcar w">
+            <div class="shoppingcar-title">购物车详情</div>
+            <div class="shoppingcar-message">
+                <table id="shoppingcar-table" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td><input id="all-checkbox" type="checkbox"/>全选</td>
+                            <td>商品名称</td>
+                            <td>商品规格</td>
+                            <td>商品单价</td>
+                            <td>商品数量</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody id="shoppingcar-tbody">
+                    <tr>
+                        <td><input type="checkbox"/></td>
+                        <td>
+                            <div class="sc-goods-name">
+                                <img src="images/shoppingcar/nw11.JPG" alt=""/>
+                                <span>女士高跟鞋</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="sc-goods-color">颜色：<span>黑色</span></div>
+                            <div class="sc-goods-size">尺寸：<span>38</span></div>
+                        </td>
+                        <td>
+                            <div class="sc-goods-price">¥ 2000.00</div>
+                        </td>
+                        <td>
+                            <span class="del-goods-num">-</span><input class="sc-goods-num" type="text" value="1"/><span class="add-goods-num">+</span>
+                        </td>
+                        <td><a href="javascript:;">删除</a></td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td><input type="checkbox"/></td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-name">-->
+                                <!--<img src="images/shoppingcar/nw11.JPG" alt=""/>-->
+                                <!--<span>女士高跟鞋</span>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-color">颜色：<span>黑色</span></div>-->
+                            <!--<div class="sc-goods-size">尺寸：<span>38</span></div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-price">¥ 2000.00</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<span class="del-goods-num">-</span><input class="sc-goods-num" type="text" value="1"/><span class="add-goods-num">+</span>-->
+                        <!--</td>-->
+                        <!--<td><a href="javascript:;">删除</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td><input type="checkbox" /></td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-name">-->
+                                <!--<img src="images/shoppingcar/nw11.JPG" alt=""/>-->
+                                <!--<span>女士高跟鞋</span>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-color">颜色：<span>黑色</span></div>-->
+                            <!--<div class="sc-goods-size">尺寸：<span>38</span></div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-price">¥ 2000.00</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<span class="del-goods-num">-</span><input class="sc-goods-num" type="text" value="1"/><span class="add-goods-num">+</span>-->
+                        <!--</td>-->
+                        <!--<td><a href="javascript:;">删除</a></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td><input type="checkbox"/></td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-name">-->
+                                <!--<img src="images/shoppingcar/nw11.JPG" alt=""/>-->
+                                <!--<span>女士高跟鞋</span>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-color">颜色：<span>黑色</span></div>-->
+                            <!--<div class="sc-goods-size">尺寸：<span>38</span></div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="sc-goods-price">¥ 2000.00</div>-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<span class="del-goods-num">-</span><input class="sc-goods-num" type="text" value="1"/><span class="add-goods-num">+</span>-->
+                        <!--</td>-->
+                        <!--<td><a href="javascript:;">删除</a></td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+                <!--<div class="sc-notgoods-ts">-->
+                    <!--<p id="sc-notgoods-p">您的购物车中还没有商品，赶紧选购吧！</p>-->
+                    <!--<a href="product.html" id="sc-notgoods-a" class="btnly">产品分类</a>-->
+                <!--</div>-->
+            </div>
+            <div id="sc-allmessage" class="clearfix">
+                <div class="sc-allmessage-l fl">
+                    <div class="sc-allmessage-l-l">
+                        <input id="sc-allmessage-checkbox" type="checkbox"/>全选<a id="sc-allmessage-l-l-del" href="javascript:;">删除选中的商品</a>
+                    </div>
+                </div>
+                <div class="sc-allmessage-r fr">
+                    <a id="user-goods-nums" href="javascript:;">您已经选中<i>4</i>件商品</a>
+                    <span id="user-goods-allprice">合计：<i>¥<strong>7000.00</strong></i></span>
+                    <a id="go-accountbar" class="btnly fl" href="#">去结算</a>
+                </div>
+            </div>
+            <div class="goods-info-recommend">
+                <p class="goods-info-recommend-title">相关推荐</p>
+                <p class="goods-info-recommend-title2">RELEVANT RECOMMENDATION</p>
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/shoppingcar/youlike.jpg" alt=""/>
+                        <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i>2,000</p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <li>
+                        <img src="images/shoppingcar/youlike.jpg" alt=""/>
+                        <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i>2,000</p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <li>
+                        <img src="images/shoppingcar/youlike.jpg" alt=""/>
+                        <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i>2,000</p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <li>
+                        <img src="images/shoppingcar/youlike.jpg" alt=""/>
+                        <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i>2,000</p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <li>
+                        <img src="images/shoppingcar/youlike.jpg" alt=""/>
+                        <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i>2,000</p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/g-nav.js"></script>
+    <script type="text/javascript" src="js/shoppingCar.js"></script>
+    <!--<script>-->
+
+        <!--console.log($("#shoppingcar-tbody tr").length);-->
+
+
+    <!--</script>-->
+</body>
+</html>

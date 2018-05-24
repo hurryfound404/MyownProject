@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+    <link rel="stylesheet" href="css/productInfo.css"/>
+</head>
+<body>
+
+    <%-include g-nav.html%>
+    <section>
+        <div class="goods-info w">
+            <div class="goods-info-title"><a href="productL.html">商品列表</a> >> 商品详情</div>
+            <div class="goods-info-message clearfix">
+                <div class="goods-info-message-l fl">
+                    <div class="goods-info-message-l-top clearfix">
+                        <div class="goods-info-message-l-l fl">
+                            <div id="small-Img">
+                                <% var prolyImg = proAllsize[0].progg_img_url.split(";") %>
+                                <img src="images/PrL-Img/<%=prolyImg[0]%>" id="goods-info-bigImg"/>
+                                <div class="goods-info-mask"></div>
+                            </div>
+                            <div id="magnifier">
+                                <img src="images/PrL-Img/<%=prolyImg[0]%>" alt=""/>
+                            </div>
+                        </div>
+                        <div class="goods-info-message-l-r fr">
+                            <ul id="goods-info-smallImg">
+                                <%for(var i=0;i<prolyImg.length;i++){%>
+                                <%if(i==0){%>
+                                <li class="goods-info-curren"><img src="images/PrL-Img/<%=prolyImg[i]%>" alt=""/></li>
+                                <%}else{%>
+                                <li><img src="images/PrL-Img/<%=prolyImg[i]%>" alt=""/></li>
+                                <%}%>
+                                <%}%>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="goods-info-message-l-bottom">
+                        <div class="goods-info-message-l-bottom-title">
+                            <div class="goods-des active">商品描述</div><div class="service-des">服务说明</div>
+                        </div>
+                        <div class="goods-info-message-l-bottom-text">
+                            <div class="goods-text1">
+                                <img src="images/productInfo/goodstext1.png" alt=""/>
+                                <div class="goods-info-textx clearfix">
+                                    <div class="goods-info-x">名称：<span><%=proInfo[0].pro_name%></span></div>
+                                    <div class="goods-info-x">产地：<span><%=proInfo[0].pro_origin%></span></div>
+                                    <div class="goods-info-x">跟高：<span>高跟(<%=proInfo[0].pro_genhigh%>)</span></div>
+                                    <div class="goods-info-x">跟型：<span><%=proInfo[0].pro_genxing%></span></div>
+                                    <div class="goods-info-x">里料：<span><%=proInfo[0].pro_liliao%></span></div>
+                                    <div class="goods-info-x">鞋面：<span><%=proInfo[0].pro_xiemian%></span></div>
+                                    <div class="goods-info-x">鞋底：<span><%=proInfo[0].pro_xiedimian%></span></div>
+                                </div>
+                                <img src="images/productInfo/goodstext2.png" alt=""/>
+                                <div class="goods-word-des"><%=proInfo[0].pro_info%></div>
+                                <img src="images/productInfo/goodstext3.png" alt=""/>
+                                <img class="size-img" src="images/productInfo/goodstext4.png" alt=""/>
+                                <img src="images/productInfo/goodstext5.png" alt=""/>
+                                <div id="goods-text1-img">
+                                    <%for(var j=0;j<prolyImg.length;j++){%>
+                                    <img class="new-ad-img" src="images/PrL-Img/<%=prolyImg[j]%>" alt=""/>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-info-message-l-bottom-service">
+                            <div class="l-bottom-service clearfix">
+                                <img class="fl" src="images/productInfo/s1.png" alt=""/>
+                                <div class="service-p fl">
+                                    <p class="l-bottom-service-p1">店铺发货&售后</p>
+                                    <p class="l-bottom-service-p2">由 ULIFE 发货, ULIFE官方旗舰店提供售后服务。</p>
+                                </div>
+                            </div>
+                            <div class="l-bottom-service clearfix">
+                                <img class="fl" src="images/productInfo/s2.png" alt=""/>
+                                <div class="service-p fl">
+                                    <p class="l-bottom-service-p1">货到付款</p>
+                                    <p class="l-bottom-service-p2">支持送货上门后再收款，支持现金、pos机刷卡等方式</p>
+                                </div>
+                            </div>
+                            <div class="l-bottom-service clearfix">
+                                <img class="fl" src="images/productInfo/s3.png" alt=""/>
+                                <div class="service-p fl">
+                                    <p class="l-bottom-service-p1">七天退换</p>
+                                    <p class="l-bottom-service-p2">支持七天无理由退换</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="goods-info-message-r fl">
+                    <p class="goods-info-message-type"><%=proTypename%></p>
+                    <p class="goods-info-message-name"><%=proInfo[0].pro_name%></p>
+                    <p class="goods-info-message-price">
+                        <span class="goods-info-message-nowprice"><i>￥</i><em><%=proInfo[0].pro_new_price%>.00</em></span>
+                        <span class="goods-info-message-beforeprice"><i>￥</i><em><%=proInfo[0].pro_price%>.00</em></span>
+                    </p>
+                    <div class="goods-info-message-count clearfix">
+                        <span class="goods-info-message-count-word">库存量　：</span>
+                        <div class="goods-info-message-count-op">
+                            <span id="goods-info-counts"><%=proAllsize[0].progg_amount%></span>
+                            <span class="goods-info-free">(免运费)</span>
+                            <p>(由 ULIFE 发货, 并提供售后服务。)</p>
+                        </div>
+                    </div>
+                    <div class="goods-info-message-color clearfix">
+                        <span class="goods-info-message-color-p">颜色分类：</span>
+                        <ul id="goods-info-message-color-type" class="fl clearfix">
+                            <%for(var i=0;i<proAllcolor.length;i++){%>
+                            <%if(i==0){%>
+                            <li class="goods-color-curren"><%=proAllcolor[i].progg_color%></li>
+                            <%}else{%>
+                            <li><%=proAllcolor[i].progg_color%></li>
+                            <%}%>
+                            <%}%>
+                        </ul>
+                    </div>
+                    <div class="goods-info-message-size clearfix">
+                        <span class="goods-info-message-size-p">尺　　码：</span>
+                        <ul id="goods-info-message-size-type" class="fl clearfix">
+                            <%for(var i=0;i<proAllsize.length;i++){%>
+                            <%if(i==0){%>
+                            <li class="goods-size-curren"><%=proAllsize[i].progg_size%></li>
+                            <%}else{%>
+                            <li><%=proAllsize[i].progg_size%></li>
+                            <%}%>
+                            <%}%>
+                        </ul>
+                    </div>
+                    <div class="goods-info-message-addnum clearfix">
+                        <span class="goods-info-message-addnum-p">数　　量：</span>
+                        <div class="goods-addnum fl">
+                            <span id="minus-goods" class="minus-goods-not0">-</span>
+                            <input id="goods-info-message-Num" type="text" value="1"/>
+                            <span id="add-goods">+</span>
+                        </div>
+                    </div>
+                    <button id="goods-info-add-car" class="btnly">加入购物车</button>
+                    <div class="goods-info-message-share"><img src="images/productInfo/share.png" alt=""/>分享</div>
+                </div>
+            </div>
+            <div class="goods-info-recommend">
+                <p class="goods-info-recommend-title">相关推荐</p>
+                <p class="goods-info-recommend-title2">RELEVANT RECOMMENDATION</p>
+                <%
+                function toDecimal2(x) {
+                var f = parseFloat(x);
+                if (isNaN(f)) {
+                return false;
+                }
+                var f = Math.round(x*100)/100;
+                var s = f.toString();
+                var rs = s.indexOf('.');
+                if (rs < 0) {
+                rs = s.length;
+                s += '.';
+                }
+                while (s.length <= rs + 2) {
+                s += '0';
+                }
+                return s;
+                }
+                %>
+                <ul id="recommend_pro" class="clearfix">
+                    <%for(var i=0;i<getcomm.length;i++){%>
+                    <li goodsid="<%=getcomm[i].pro_id%>">
+                        <img src="<%=getcomm[i].pro_img_goods%>" alt=""/>
+                        <p class="goods-info-recommend-name"><%=getcomm[i].pro_name%></p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i><%=toDecimal2(getcomm[i].pro_new_price)%></p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        <div id="add-goods-success">添加成功</div>
+    </section>
+
+    <%-include g-footer.html%>
+
+
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/mytool.js"></script>
+    <script type="text/javascript" src="js/g-nav.js"></script>
+    <script type="text/javascript" src="js/productInfo.js"></script>
+
+</body>
+</html>

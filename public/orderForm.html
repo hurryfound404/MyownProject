@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/orderForm.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+
+</head>
+<body>
+<!--导航-->
+<header>
+    <div class="nav_of"></div>
+</header>
+<!--身体-->
+<section>
+    <div class="zhezhao"></div>
+    <div class="tianXie">填写订单</div>
+    <div id="content_box">
+        <div class="information">
+            <div class="information_xinxi clearfix">
+               <p class="information_word">收货信息</p>
+               <div class="information_tianJia">
+                    <p id="append"><span>+</span>&nbsp;添加收货地址</p>
+               </div>
+            </div>
+            <div class="lineone"></div>
+            <div class="appendXinXi">
+                        <div class="appendXinXi_xinxi clearfix">
+                            <p class="appendXinXi_word">添加收获地址</p>
+                            <span class="appendXinXi_X">x</span>
+                        </div>
+
+                        <div class="appendXinXi_line"></div>
+                        <p class="appendXinXi_inputone"> 收件人姓名：<input type="text"/></p>
+                        <p class="appendXinXi_inputtwo"> 收件人电话：<input type="text"/></p>
+                        <div class="info">
+                            <div>
+                                <span>地址：</span>
+                                <select id="s_province" name="s_province"></select>  
+                                <select id="s_city" name="s_city" ></select>  
+                                <select id="s_county" name="s_county"></select>
+                            </div>
+                        </div>
+                        <div class="shuru clearfix"><p>详细地址：</p>
+                            <textarea  rows="8" cols="40"></textarea>
+                        </div>
+                        <div class="shezhi">
+                            <input class="checkbox" type="checkbox">
+                                <span>设置为默认地址</span>
+                        </div>
+                        <div class="baocun">
+                            <input class="baoCunButton" type="button" value="保存并使用">
+                        </div>
+                    </div>
+            <div class="information_address">
+                 <p class="information_address_word">刘晓燕<span>-北京</span></p>
+                 <p class="information_address_name">北京朝阳区三环以内天府二街3号</p>
+                 <p class="information_address_phone">183****3017</p>
+                <input type="button" id="test1" value="默认地址"/>
+                <p class="information_address_bianji">编辑</p>
+                <img src="images/orderForm/heigou.png"/>
+
+            </div>
+            <div class="bianjiborder">
+                <div class="bianjiborder_xinxi clearfix">
+                    <p class="bianjiborder_word">编辑收获地址</p>
+                    <span class="bianjiborder_X">x</span>
+                </div>
+
+                <div class="bianjiborder_line"></div>
+                <p class="bianjiborder_inputone"> 收件人姓名：<input type="text"/></p>
+                <p class="bianjiborder_inputtwo"> 收件人电话：<input type="text"/></p>
+                <div class="info">
+                    <div>
+                        <span>地址：</span>
+                        <select id="s_province1" name="s_province"></select>  
+                        <select id="s_city1" name="s_city" ></select>  
+                        <select id="s_county1" name="s_county"></select>
+                    </div>
+                </div>
+                <div class="shuru clearfix"><p>详细地址：</p>
+                    <textarea  rows="8" cols="40"></textarea>
+                </div>
+                <div class="baocun">
+                    <input class="baoCunButton" type="button" value="保存并使用">
+                </div>
+            </div>
+        </div>
+        <div class="payment">
+            <p class="payment_word">支付方式</p>
+            <div class="linetwo"></div>
+            <div class="payment_pay">
+                <p class="payment_pay_word">在线支付</p>
+                <img src="images/orderForm/heigou.png"/>
+            </div>
+        </div>
+        <div class="myOrder">
+            <div class="myOrder_xinXi">
+                <p class="myOrder_xinXi_word">订单信息</p>
+                <div class="shopping_cart">
+                    <p >返回购物车修改</p>
+                </div>
+            </div>
+            <div class="linethree"></div>
+            <div class="The_flagship">
+                <img src="images/orderForm/000.png" />
+                <span class="The_flagship_word">ULIFE官方旗舰店</span>
+            </div>
+            <div class="order_details clearfix">
+                <ul>
+                    <li>
+                        <div class="pic">
+                            <img src="images/orderForm/xiezi%20.png"/>
+                        </div>
+
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>金色绒皮高跟&nbsp;金色</dt>
+                            <dd>7天无理由退换</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>尺码：38</dt>
+                        </dl>
+                    </li>
+                    <li>
+                         <span>¥5,300.00</span>
+                    </li>
+                    <li>
+                        <span>x1</span>
+                    </li>
+                    <li>
+                        <span> ¥5,300.00</span>
+                     </li>
+                </ul>
+            </div>
+
+            <div class="showPeiSong">
+                <dl>
+                    <dd><span>配送方式：</span>&nbsp;快递运输¥0.00</dd>
+                    <dt><span>配送时间：</span>&nbsp;工作日、双休日与假日均可送货</dt>
+                </dl>
+            </div>
+            <div class="showCount">
+                <p>小计：<span>¥ 5,300.00</span></p>
+            </div>
+        </div>
+        <div class="packaging">
+            <p class="packaging_baoZhuangHe">包装盒</p>
+            <div class="linefour"></div>
+            <div class="packaging_moRen">
+               <ul>
+                   <li class="Bz" >
+                       <img src="images/orderForm/moren.jpg"/>
+                       <dl>
+                           <dt><span>¥ 0</span></dt>
+                           <dd>默认包装</dd>
+                       </dl>
+                       <img class="Bzimg" src="images/orderForm/heigou.png"/>
+                   </li>
+                   <li class="Bz" >
+                       <img src="images/orderForm/baozhuangyi.png"/>
+                       <dl>
+                           <dt><span>¥ 1330</span></dt>
+                           <dd>紫色恋人</dd>
+                       </dl>
+                       <img class="Bzimg" src="images/orderForm/heigou.png"/>
+                   </li>
+                   <li class="Bz" >
+                       <img src="images/orderForm/baozhuansan.png"/>
+                       <dl>
+                           <dt><span>¥ 1330</span></dt>
+                           <dd>明日之星</dd>
+                       </dl>
+                       <img class="Bzimg" src="images/orderForm/heigou.png"/>
+                   </li>
+                   <li class="Bz" >
+                       <img src="images/orderForm/baozhuangsi.png"/>
+                       <dl>
+                           <dt><span>¥ 1330</span></dt>
+                           <dd>粉色佳人</dd>
+                       </dl>
+                       <img class="Bzimg" src="images/orderForm/heigou.png"/>
+                   </li>
+                   <li class="Bz" >
+                       <img src="images/orderForm/baozhuanger.png"/>
+                       <dl>
+                           <dt><span>¥ 1330</span></dt>
+                           <dd>花开富贵</dd>
+                       </dl>
+                       <img class="Bzimg" src="images/orderForm/heigou.png"/>
+                   </li>
+               </ul>
+            </div>
+        </div>
+        <div class="showFaPiao">
+            <p class="showFaPiao_word_one">发票信息</p>
+            <div class="linefive"></div>
+            <div class="Select_box">
+                <input class="checkbox" type="checkbox" value="" />
+                <p class="showFaPiao_word_two">发票开具：纸质发票 — 个人 — 商品明细</p>
+                <div class="showFaPiao_one">
+                    <p>修改</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="coupons">
+            <div class="coupons_x clearfix">
+                <p class="coupons_word">使用优惠券 &nbsp;<span class="Jt">&#xe60c;</span></p>
+
+            </div>
+
+            <div class="linesix"></div>
+            <div class="coupons_copy">
+                <p class="coupons_copy_word">抱歉，当前您没有可用的优惠券</p>
+            </div>
+        </div>
+        <div class="queRenDingDan">
+            <div class="queRenDingDan_number clearfix">
+               <p class="queRenDingDan_one_word">共<span class="red">&nbsp;1&nbsp;</span>件商品</p>
+                <p class="queRenDingDan_two_word">商品金额：+&nbsp;¥<span> 5,300.00</span></p>
+            </div>
+            <div class="queRenDingDan_yunFei">
+                <p class="queRenDingDan_yunFei_word">运费：+&nbsp;¥<span> 00.00</span></p>
+            </div>
+            <div class="queRenDingDan_baoZhuang">
+                <p class="queRenDingDan_baoZhuang_word">包装费：+&nbsp;¥<span> 00.00</span></p>
+            </div>
+            <div class="queRenDingDan_count">
+                <p class="queRenDingDan_count_word">合计：+&nbsp;¥<span> 5,300.00</span></p>
+            </div>
+            <div class="queRenDingDan_peiSong">
+                <div class="queRenDingDan_peiSong_one">寄送至：北京朝阳区三环以内天府二街3号</div>
+                <div class="queRenDingDan_peiSong_two">收件人：liuyuan 183****3017</div>
+            </div>
+            <div class="queRenDingDan_countCopy">
+                <p class="queRenDingDan_countCopy_word" >应付金额：<span>¥ 5,300.00</span></p>
+            </div>
+            <div class="order" >
+                <input type="button" value="提交订单">
+            </div>
+    </div>
+    </div>
+</section>
+<footer>
+    <div class="dibu">
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+<script class="resources library" src="js/area.js" type="text/javascript"></script>
+<script type="text/javascript">_init_area();_init_area1();</script>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var toggle = false;
+    $(".Jt").click(function(){
+        if(toggle==false){
+//            alert("111")
+          $(".Jt").css("transform","rotate(180deg)");
+          $(".coupons_copy").css("display","block");
+            toggle = true;
+        }else {
+//            alert("222")
+            $(".coupons_copy").css("display","none");
+            $(".Jt").css("transform","rotate(360deg)");
+
+            toggle = false;
+        }
+    });
+    $("#append").click(function(){
+        $(".appendXinXi").css("display","block");
+        $(".zhezhao").css("display","block");
+    });
+    $(".appendXinXi_X").click(function(){
+        $(".appendXinXi").css("display","none");
+        $(".bianjiborder").css("display","none");
+        $(".zhezhao").css("display","none");
+    });
+    $(".bianjiborder_X").click(function(){
+        $(".bianjiborder").css("display","none");
+        $(".zhezhao").css("display","none");
+    });
+    $(".baoCunButton").click(function(){
+        $(".appendXinXi").css("display","none");
+        $(".bianjiborder").css("display","none");
+        $(".zhezhao").css("display","none");
+    });
+    $(".information_address_bianji").click(function(){
+        $(".bianjiborder").css("display","block");
+        $(".zhezhao").css("display","block");
+    });
+    $(function() {
+        $(".Bz").each(function (i,e) {
+            $(e).click(function () {
+                  $(this).addClass("checked").siblings().removeClass("checked");
+                  $(this).find("img").eq(1).css("display","inline");
+                  $(this).siblings().each(function(i,e){
+                     $(this). find("img").eq(1).css("display","none");
+                  });
+
+                });
+            });
+        });
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

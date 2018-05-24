@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+#main-g {
+  margin: 0 auto;
+}
+#main-g img {
+  width: 1190px;
+}
+#ol-g {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5%;
+}
+#ol-g .tit {
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 16px;
+}
+#ol-g .hh {
+  text-align: center;
+  font-size: 36px;
+}
+#ol-g .hh span {
+  color: #b28b60;
+}
+.lineT {
+  width: 1px;
+  height: 440px;
+  background-color: #e7e7e7;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+.olL {
+  float: left;
+  margin-top: 3%;
+  margin-left: 10%;
+}
+.olL img {
+  width: 300px;
+  -webkit-transition: all .5s linear;
+}
+.olR {
+  margin-top: 3%;
+  float: right;
+  margin-right: 10%;
+}
+.olR img {
+  width: 300px;
+}
+.enter {
+  text-align: center;
+  color: #b28b60;
+  font-size: 13px;
+  margin-top: 5%;
+}
+.buy {
+  padding-top: 3%;
+  color: #b28b60;
+  font-size: 16px;
+  text-align: center;
+}
+.shop_N {
+  padding-top: 3%;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+}
+#queen {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+#queen .tit {
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 16px;
+}
+#queen .hh {
+  text-align: center;
+  font-size: 36px;
+}
+#queen .hh span {
+  color: #b28b60;
+}
+#queen .Q {
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 500px;
+}
+#queen .Q img {
+  width: 500px;
+}
+#queen .qu1,
+#queen .qu2,
+#queen .qu3,
+#queen .qu4 {
+  position: absolute;
+}
+#queen .qu1 img,
+#queen .qu2 img,
+#queen .qu3 img,
+#queen .qu4 img {
+  width: 160px;
+}
+#queen .qu1 {
+  left: 5%;
+  top: 13%;
+}
+#queen .qu2 {
+  right: 5%;
+  top: 13%;
+}
+#queen .qu3 {
+  left: 5%;
+  top: 60%;
+}
+#queen .qu4 {
+  right: 5%;
+  top: 60%;
+}
+#queen .shop_N1 {
+  margin-top: 2%;
+  text-align: center;
+  color: black;
+}
+#marry {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5%;
+}
+#marry .tit {
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 16px;
+}
+#marry .hh {
+  text-align: center;
+  font-size: 36px;
+}
+#marry .hh span {
+  color: #b28b60;
+}
+#BtnM {
+  width: 122px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  margin-left: 45%;
+  margin-top: 5%;
+}
+.ol1 {
+  -webkit-transition: all .5s linear;
+}
+.ol1:hover {
+  -webkit-transform: scale(1.1, 1.1);
+}
+.btnly {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all ease-in-out 0.5s;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  border: none;
+}
+.btnly:after {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  right: -150%;
+  content: "";
+  visibility: hidden;
+  transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+}
+@keyframes btnHover {
+  0% {
+    right: -150%;
+    opacity: 1;
+  }
+  50% {
+    right: -20%;
+    opacity: 1;
+  }
+  100% {
+    right: -20%;
+    opacity: 0;
+  }
+}
+.btnly:hover::after {
+  -webkit-animation: btnHover ease 1.5s both;
+  -moz-animation: btnHover ease 1.5s both;
+  animation: btnHover ease 1.5s both;
+  visibility: visible;
+}

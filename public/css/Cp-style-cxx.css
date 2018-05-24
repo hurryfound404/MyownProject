@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#TX {
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+}
+#I {
+  width: 130px;
+  margin: 0 auto;
+}
+#img {
+  width: 130px;
+}
+#P {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#XG {
+  width: 800px;
+  height: 40px;
+  background-color: gainsboro;
+}
+#CP {
+  line-height: 40px;
+  margin-left: 40px;
+  font-size: 16px;
+}
+.text {
+  font-size: 13px;
+  margin-top: 20px;
+}
+.input-cxx {
+  margin-top: 10px;
+  height: 30px;
+  width: 250px;
+}
+.B {
+  border: 0;
+  color: white;
+  background-color: black;
+  width: 122px;
+  height: 40px;
+  margin-top: 20px;
+}
+#YZM {
+  height: 30px;
+  width: 130px;
+}
+#YB {
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  color: white;
+  background-color: grey;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+  width: 100px;
+}
+#YB:hover {
+  color: #b28b60;
+  background-color: whitesmoke;
+}
+#H {
+  color: #b28b60;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid gainsboro;
+}
+#TJ {
+  border: 1px solid grey;
+  margin-left: 900px;
+  margin-top: -500px;
+}
+#Show1 {
+  margin-left: 80px;
+  width: 130px;
+}
+#Show2 {
+  margin-left: 80px;
+  width: 130px;
+  margin-top: -90px;
+}
+.C {
+  text-align: center;
+  margin-top: 10px;
+}
+.M {
+  text-align: center;
+  margin-top: 10px;
+}
+.More {
+  color: white;
+  background-color: grey;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.H1 {
+  height: 320px;
+  border: 1px solid grey;
+}

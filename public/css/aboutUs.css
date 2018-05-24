@@ -1,0 +1,347 @@
+#box {
+  width: 1190px;
+  position: relative;
+  margin: 0 auto;
+}
+#aboutUs {
+  height: 2900px;
+}
+.nav-ls {
+  width: 1190px;
+  height: 100px;
+  background-color: black;
+}
+.banner_o img {
+  width: 1190px;
+}
+.title_o {
+  text-align: center;
+  width: 240px;
+  height: 50px;
+  line-height: 42px;
+  position: absolute;
+  top: 540px;
+  left: 0px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all ease-in-out 1s;
+  transition: all 1s ease-in-out;
+}
+.title_o .title_o_div {
+  font-size: 16px;
+  Letter-spacing: 6px;
+  line-height: 22px;
+}
+.title_o > p {
+  color: #b28b60;
+  text-align: center;
+  font-size: 36px;
+}
+.title_o span {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.section_one_o {
+  width: 600px;
+  height: 240px;
+  position: absolute;
+  top: 620px;
+  left: 470px;
+  box-shadow: 5px 5px 5px #DDDDDD;
+  background-color: #f3f3f3;
+}
+.section_one_o > a > img {
+  position: absolute;
+  top: 40px;
+  left: -180px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all ease-in-out 1s;
+  transition: all 1s ease-in-out;
+  z-index: 1;
+  box-shadow: 5px 5px 5px #DDDDDD;
+}
+.section_one_t > h1 {
+  position: absolute;
+  top: 680px;
+  left: 600px;
+  font-size: 22px;
+}
+.section_one_t > p {
+  position: absolute;
+  top: 730px;
+  left: 600px;
+  width: 350px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.section_one_t > span {
+  position: absolute;
+  top: 800px;
+  left: 950px;
+  color: #b28b60;
+}
+.section_two_ls {
+  background-color: #F3F3F3;
+  width: 1190px;
+  height: 400px;
+  position: absolute;
+  top: 950px;
+}
+.section_two_o {
+  width: 700px;
+  height: 240px;
+  position: absolute;
+  top: 130px;
+  left: 140px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #DDDDDD;
+}
+.section_two_o > h1 {
+  width: 600px;
+  height: 240px;
+  position: absolute;
+  top: 50px;
+  left: 130px;
+  font-size: 22px;
+}
+.section_two_o > p {
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  width: 380px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.section_two_o > span {
+  position: absolute;
+  top: 180px;
+  left: 450px;
+  color: #b28b60;
+}
+.section_two_t > a > img {
+  position: absolute;
+  top: 10px;
+  left: 760px;
+  z-index: 1;
+}
+.section_three_o > a > img {
+  position: absolute;
+  top: 1440px;
+  left: 280px;
+  z-index: 1;
+}
+.section_three_t {
+  width: 600px;
+  height: 240px;
+  position: absolute;
+  top: 1450px;
+  left: 470px;
+  box-shadow: 5px 5px 5px #DDDDDD;
+  background-color: #f3f3f3;
+}
+.section_three_t > h1 {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  width: 300px;
+  font-size: 22px;
+}
+.section_three_t > p {
+  position: absolute;
+  top: 110px;
+  left: 150px;
+  width: 350px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.section_three_t > span {
+  position: absolute;
+  top: 180px;
+  left: 430px;
+  color: #b28b60;
+}
+.section_fore_ls {
+  background-color: #F3F3F3;
+  width: 1190px;
+  height: 430px;
+  position: absolute;
+  top: 1800px;
+}
+.section_fore_o {
+  width: 700px;
+  height: 240px;
+  position: absolute;
+  top: 130px;
+  left: 140px;
+  background-color: white;
+  box-shadow: 5px 5px 5px #DDDDDD;
+}
+.section_fore_o > h1 {
+  width: 600px;
+  height: 240px;
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  font-size: 22px;
+}
+.section_fore_o > p {
+  position: absolute;
+  top: 140px;
+  left: 130px;
+  width: 300px;
+  text-indent: 20px;
+  font-size: 14px;
+}
+.section_fore_o > span {
+  position: absolute;
+  top: 180px;
+  left: 500px;
+  color: #b28b60;
+}
+.section_fore_t {
+  position: absolute;
+  top: 10px;
+  left: 780px;
+  z-index: 1;
+  box-shadow: 5px 5px 5px #DDDDDD;
+}
+.title_t {
+  text-align: center;
+  width: 224px;
+  height: 50px;
+  line-height: 42px;
+  position: absolute;
+  top: 2280px;
+  left: 481px;
+}
+.title_t .title_o_div {
+  font-size: 16px;
+  Letter-spacing: 6px;
+  line-height: 22px;
+}
+.title_t > p {
+  font-size: 36px;
+  color: #b28b60;
+  text-align: center;
+}
+.title_t span {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+}
+.contactUs {
+  border: 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 900px;
+  height: 460px;
+  position: absolute;
+  top: 2400px;
+  left: 150px;
+}
+.contactUs-o > ul > li {
+  margin: 38px 86px;
+  float: left;
+  text-align: center;
+}
+.contactUs-o > ul > li > dl > dt {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.contactUs-o > ul > li > dl > dd {
+  font-size: 10px;
+  margin-top: 14px;
+}
+.contactUs-t > ul {
+  margin-left: 13px;
+}
+.contactUs-t > ul > li {
+  margin: 38px 86px;
+  float: left;
+  text-align: center;
+}
+.contactUs-t > ul > li > dl > dt {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.contactUs-t > ul > li > dl > dd {
+  font-size: 10px;
+  margin-top: 14px;
+}
+.dibu {
+  width: 1190px;
+  height: 400px;
+  background-color: black ;
+  position: absolute;
+  top: 3000px;
+}
+.d1 {
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 710px;
+  left: 600px;
+  background-color: white;
+  -webkit-transition: width 1s linear,
+  background .5s linear,
+  margin .3s linear;
+}
+.section_one_t:hover .d1 {
+  width: 380px;
+  height: 2px;
+  background-color: black;
+  /*margin-left: 100px;*/
+}
+.d2 {
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 80px;
+  left: 130px;
+  z-index: 1;
+  background-color: white;
+  -webkit-transition: width 1s linear,
+  background .5s linear,
+  margin .3s linear;
+}
+.section_two_o:hover .d2 {
+  width: 380px;
+  height: 2px;
+  background-color: black;
+}
+.d3 {
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  z-index: 1;
+  background-color: black;
+  -webkit-transition: width 1s linear,
+  background .5s linear,
+  margin .3s linear;
+}
+.section_three_t:hover .d3 {
+  width: 300px;
+  height: 2px;
+  background-color: black;
+  /*margin-left: 100px;*/
+}
+.d4 {
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 110px;
+  left: 100px;
+  z-index: 1;
+  background-color: white;
+  -webkit-transition: width 1s linear,
+  background .5s linear,
+  margin .3s linear;
+}
+.section_fore_o:hover .d4 {
+  width: 380px;
+  height: 2px;
+  background-color: black;
+  /*margin-left: 100px;*/
+}

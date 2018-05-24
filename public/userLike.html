@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userLike</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+
+</head>
+<body>
+<div class="contents_zy">
+    <!--导航-->
+    <nav>
+        <ul class="userNav_zy">
+            <li><a>
+                <img src="images/userimgs/logo2.png" height="65" width="65"/>
+            </a>
+            </li>
+        </ul>
+    </nav>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <div class="userBnner_zy">
+            <!--logo字体-->
+            <span>U L I F E</span>
+            <!--导航条-->
+            <div class="user_navBox_zy">
+                <!--头像-->
+                <div class="userPhoto_zy">
+                    <img src="images/userimgs/user2.jpg" height="150" width="150"/>
+                    <span>&#xf0048;</span>
+                    <p>上传新的头像</p>
+                </div>
+                <!--用户名-->
+                <span class="userName_zy">UserName</span>
+            </div>
+        </div>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <div class="left_ul_zy">
+                    <ul>
+                        <li><a href="userCenter_zy.html">我的信息</a></li>
+                        <li><a href="userOrder.html">我的订单</a></li>
+                        <li><a href="userShopCar.html">购物车</a></li>
+                        <li><a href="userCoupon.html">优惠券</a></li>
+                        <li><a href="userLike.html">我的收藏</a></li>
+                        <li><a href="userAdress.html">地址管理</a></li>
+                        <li><a href="userPwd.html">修改密码</a></li>
+                    </ul>
+                </div>
+                <!--这里是需要切换的内容块-->
+                <div class="main_box_zy">
+                    <span>我的收藏</span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <!--收藏列表-->
+                    <div class="tabChange_content_zy">
+                        <!--tab栏和搜索栏-->
+                        <dl class="clearfix carTab_ul_zy">
+                            <input type="text" placeholder="请输入商品名称" class="input-css-zy carSelectInpute_zy clearfix">
+                            <button class="bnt-zy car_buttonSelect_zy clearfix">搜索</button>
+                        </dl>
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--收藏-->
+                            <label>商品收藏信息</label>
+                        </div>
+                        <!--表格-->
+                        <div class="tables_zy">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <td><input type="checkbox">全选</td>
+                                    <td>商品</td>
+                                    <td>单价</td>
+                                    <td>操作</td>
+                                    <td></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox">选择</td>
+                                    <td><img src="images/userimgs/hot1.jpg" height="100" width="100"/></td>
+                                    <td>￥569</td>
+                                    <td><a href="">删除</a></td>
+                                    <td><a href="">加入购物车</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--底部灰色条-->
+                        <div class="car_childNav2_zy">
+                            <!--购物车底部灰色条-->
+                            <input type="checkbox">
+                            <label>全选</label>
+                            <button class="bnt-zy car_buttomButton_zy">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+</body>
+</html>

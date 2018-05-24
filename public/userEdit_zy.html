@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIFE个人中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="contents_zy">
+    <!--导航-->
+    <nav>
+        <ul class="userNav_zy">
+            <li><a>
+                <img src="images/userimgs/logo2.png" height="65" width="65"/>
+            </a>
+            </li>
+        </ul>
+    </nav>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <div class="userBnner_zy">
+            <!--logo字体-->
+            <span>U L I F E</span>
+            <!--导航条-->
+            <div class="user_navBox_zy">
+                <!--头像-->
+                <div class="userPhoto_zy">
+                    <img src="images/userimgs/user2.jpg" height="150" width="150"/>
+                    <span>&#xf0048;</span>
+                    <p>上传新的头像</p>
+                </div>
+                <!--用户名-->
+                <span class="userName_zy">UserName</span>
+            </div>
+        </div>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <div class="left_ul_zy">
+                    <ul>
+                        <li><a href="userCenter_zy.html">我的信息</a></li>
+                        <li><a href="userOrder.html">我的订单</a></li>
+                        <li><a href="userShopCar.html">购物车</a></li>
+                        <li><a href="userCoupon.html">优惠券</a></li>
+                        <li><a href="userLike.html">我的收藏</a></li>
+                        <li><a href="userAdress.html">地址管理</a></li>
+                        <li><a href="userPwd.html">修改密码</a></li>
+                    </ul>
+                </div>
+                <!--这里是需要切换的内容块-->
+                <div class="main_box_zy">
+                    <span>编辑个人信息</span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <!--编辑个人人信息表单-->
+                    <div class="tabChange_content_zy">
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--收货人地址-->
+                            <label>编辑信息</label>
+                        </div>
+                        <form action="" class="adressForm_zy">
+                            <div class="leftForm clearfix">
+                                <p>姓名</p>
+                                <input type="text" placeholder="请输入收货人姓名" class="input-css-zy" >
+                                <p>更改常用收货地点</p>
+                                <select name=""  class="form-control-zy">
+                                    <option value="">四川省</option>
+                                    <option value="">东北省</option>
+                                    <option value="">湖南省</option>
+                                </select>
+                                <select name=""  class="form-control-zy">
+                                    <option value="">成都市</option>
+                                    <option value="">北京市</option>
+                                    <option value="">上海市</option>
+                                </select>
+                                <select name=""  class="form-control-zy">
+                                    <option value="">武侯区</option>
+                                    <option value="">天府新区</option>
+                                    <option value="">双流区</option>
+                                </select>
+                                <p>编辑详细收货地址</p>
+                                <input type="text" placeholder="请输入详细地址" class="input-css-zy" >
+                            </div>
+                            <div class="rightForm clearfix">
+                                <p>称谓</p>
+                                <select name=""  class="form-control-zy">
+                                    <option value="1">男士</option>
+                                    <option value="">女士</option>
+                                </select>
+                                <p>更改常用电话</p>
+                                <input type="text" placeholder="请输入收货人电话" class="input-css-zy" >
+                                <p>邮箱</p>
+                                <input type="text" placeholder="收货人邮箱：xx@qq.com" class="input-css-zy" >
+                            </div>
+                            <button class="bnt-zy addSave_zy">保存更改</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+</body>
+
+</html>

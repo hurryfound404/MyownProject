@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>personal-load</title>
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/Load-style-cxx.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        #user-tip-w {
+            position: fixed;
+            color: #fff;
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px 100px;
+            top: 120px;
+            left: 50%;
+            text-align: center;
+            line-height: 30px;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            z-index: -999;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="userNav_zy">
+            <li>
+                <a href="index.html">
+                    <img src="images/userimgs/logo2.png" height="65" width="65" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class=" contentLoad_cxx w">
+        <!--标题-->
+        <div>
+            <img src="images/userimgs/styleicon.png" alt="" class="T" height="70" width="500" />
+        </div>
+        <!--登录页左部分-->
+        <div id="L">
+            <div id="TS">
+                <p id="P">请用
+                    <span class="U">Ulife</span>
+                    账号登录
+                </p>
+            </div>
+            <!--<form action=""></form>-->
+            <div class="Input">
+                <input type="text" placeholder="用户名" name="username" id="YH" class="input-css-zy" />
+            </div>
+            <div class="Input">
+                <input type="password" placeholder="密码" name="password" id="M" class="input-css-zy" />
+            </div>
+            <button id="DL" class="bnt-zy">登录</button>
+        </div>
+        <!--中间线条-->
+        <div class="line_cxx"></div>
+        <!--登录页右部分-->
+        <div id="R">
+            <div>
+                <p id="ZC">新用户注册</p>
+            </div>
+            <div id="TQ">
+                <p>成为Ulife最尊贵会员，并且随时可以查看管理订单记录，
+                    <br> 第一时间追踪物流，获取最新潮牌咨询。
+                </p>
+            </div>
+            <a href="userRigester_zy.html">
+                <button class="Z">注册</button>
+            </a>
+        </div>
+    </div>
+    <div id="user-tip-w">用户名或密码错误<br>请重新输入</div>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/mytool.js"></script>
+    <script type="text/javascript" src="js/userLogin.js"></script>
+</body>
+
+</html>

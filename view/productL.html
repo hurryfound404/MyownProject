@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/PrL-g.css">
+    <link rel="stylesheet" href="css/g-nav.css" />
+    <link rel="stylesheet" href="css/g-footer.css" />
+</head>
+<body>
+    <div id="loading">
+        <img src="images/index/load.gif" alt="">
+    </div>
+    <%-include g-nav.html%>
+<!--大文字-->
+<div id='ly_w'>
+<div id="success"></div>
+<section id="Tit">
+    <h2>高跟鞋</h2>
+    <p>在ULIFE进行编辑设计师鞋的精美设计，提升您的服装。我们精心策划的选择具有从永恒经典风格到非常规设计的功能</p>
+    <p>来自Miu Miu的雕塑水泵，来自Jimmy Choo的迷人设计，来自Stella McCartney的高跟鞋和来自Balenciaga的</p>
+    <p>华美高跟袜子靴子。</p>
+</section>
+<!--查询及展示-->
+<section id="shop" class="clearfix">
+    <!--查询-->
+    <div id="src">
+        <div id="filter">
+            <div class="fs">您选择的筛选方式将出现在下处</div>
+            <div id="show"></div>
+        </div>
+        <form id="filter1">
+            <div id="ind">高跟类别</div>
+            <div id="Kind">
+                <div class="Kind" >office</div>
+                <div class="Kind" >女王范</div>
+                <div class="Kind" >婚鞋</div>
+            </div>
+            <div id="height">鞋跟高度</div>
+            <div id="SHeight">
+                <div class="SHeight">10cm以下</div>
+                <div class="SHeight">10cm以上</div>
+            </div>
+            <div id="price">价格</div>
+            <div id="SPrice">
+                <div class="SPrice">从高到低</div>
+                <div class="SPrice">从低到高</div>
+            </div>
+        </form>
+    </div>
+    <!--商品列表-->
+    <div id="shopL">
+        <div id="bannerS">
+            <a href=""><img src="images/PrL-Img/bannerS.jpg" alt=""></a>
+            <button class="btnly">HI,Let's Show</button>
+        </div>
+        <div id="Pro">
+            <!--<div class="shopList1">-->
+                <!--<div class="Collection"><span>&#xe601;</span></div>-->
+                <!--<a href=""><img src="images/PrL-Img/listZ1.jpg" alt=""></a>-->
+                <!--&lt;!&ndash;相对描述&ndash;&gt;-->
+                <!--<div class="description">-->
+                    <!--<p class="nP">芬迪 ¥ 450</p>-->
+                    <!--<p class="buybuy">查看详情</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--分页-->
+    <section id="Pages">
+        <div id="btnFirst">首页</div>
+        <div id="btnPrev">&#xe64a;上一页</div>
+        <div id="divPage"></div>
+        <div id="btnNext">下一页&#xe662;</div>
+        <div id="btnLast">尾页</div>
+    </section>
+</section>
+</div>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/ajax-g.js"></script>
+<script src="js/PrL-g.js"></script>
+<script src="js/g-nav.js"></script>
+<!--<script src="js/less.js"></script>-->
+
+<script>
+</script>
+</body>
+</html>

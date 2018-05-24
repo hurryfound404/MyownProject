@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style2-sj.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+<%-include g-nav.html%>
+<section class="paySuccess">
+        <div class="leftFloat">
+            <img src="images/paySccuess/success.png" alt=""/>
+        </div>
+        <div class="rightFloat">
+            <p>您的订单已支付成功！</p>
+            <p>我们将会在24小时内发货，请留意您的手机信息！</p>
+        </div>
+    <div class="functionBtn">
+        <a href="productL.html" class="btnly">继续购物</a>
+        <a href="index.html" class="btnly">返回首页</a>
+    </div>
+</section>
+<section class="guessLove">
+    <div>
+        <div class="choice1">
+           <p>猜你喜欢</p>
+            <div class="mouseOverLine1"></div>
+        </div>
+    </div>
+    <!--猜你喜欢-->
+    <div class="allPicLove">
+        <%
+        function toDecimal2(x) {
+        var f = parseFloat(x);
+        if (isNaN(f)) {
+        return false;
+        }
+        var f = Math.round(x*100)/100;
+        var s = f.toString();
+        var rs = s.indexOf('.');
+        if (rs < 0) {
+        rs = s.length;
+        s += '.';
+        }
+        while (s.length <= rs + 2) {
+        s += '0';
+        }
+        return s;
+        }
+        %>
+        <ul id="recommend_pro" class="clearfix">
+            <%for(var i=0;i<successgoods.length;i++){%>
+            <li goodsid="<%=successgoods[i].pro_id%>">
+                <img src="<%=successgoods[i].pro_img_goods%>" alt=""/>
+                <p class="goods-info-recommend-name"><%=successgoods[i].pro_name%></p>
+                <p class="goods-info-recommend-nowprice"><i>￥</i><%=toDecimal2(successgoods[i].pro_new_price)%></p>
+                <button class="btnly">立即购买</button>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+
+</section>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/g-nav.js"></script>
+<script>
+     $(".choice1").click(function(){
+         $(".mouseOverLine1").css("display","block");
+         $(".mouseOverLine2").css("display","none");
+         $(".allPicLove").css("display","block");
+         $(".allPicLookAt").css("display","none");
+
+     });
+     $(".choice2").click(function(){
+         $(".mouseOverLine2").css("display","block");
+         $(".mouseOverLine1").css("display","none");
+         $(".allPicLookAt").css("display","block");
+         $(".allPicLove").css("display","none");
+     })
+
+     $("#recommend_pro button").on('click', function () {
+        //  console.log(1)
+            $.ajax({
+                type: "get",
+                url: "/prlproid.do",
+                data: {
+                    proid: 1
+                },
+                success: function (ajaxObj) { //console.log(ajaxObj);
+                    if (ajaxObj == "ok") {
+                        window.location.href = "productInfo.html";
+                    }
+                }
+            })
+        })
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIFE个人中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+<!--遮罩层-->
+<div class="hiddenBody"></div>
+<div class="massageSucsess">
+    <div class="massageSure_title_zy">
+        <span>来自Ulife的消息</span>
+        <span class="exsitSureMassage">&#xe60e;</span>
+    </div>
+    <!--横线-->
+    <div class="massageSure_line_x"></div>
+    <div class="massageSure_content_zy">
+        <span>操作成功！</span>
+        <button class="bnt-zy confirmOk">确认</button>
+    </div>
+</div>
+<div class="contents_zy">
+    <!--导航-->
+    <%-include g-nav.html%>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <%-include userBnner-commen.html%>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <%-include userLeft-tab-commen.html%>
+                <div class="main_box_zy">
+                    <span>编辑个人信息</span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <!--编辑个人人信息表单-->
+                    <div class="tabChange_content_zy">
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--收货人地址-->
+                            <label>编辑信息</label>
+                        </div>
+                        <div class="adressForm_zy">
+                            <div class="leftForm clearfix">
+                                <p>姓名</p>
+                                <input type="text" placeholder="<%=user.user_name%>" class="input-css-zy editUserName" >
+                                <p>更改登录名</p>
+                                <input type="text" placeholder="<%=user.user_loginName%> " class="input-css-zy editLoginName">
+                                <p>邮箱</p>
+                                <input type="text" placeholder="<%=user.user_email%>" class="input-css-zy editMail">
+                            </div>
+                            <div class="rightForm clearfix">
+                                <p>称谓</p>
+                                <select name=""  class="form-control-zy editUserSex">
+                                    <option value="1">男士</option>
+                                    <option value="0">女士</option>
+                                </select>
+                                <p>更改常用电话</p>
+                                <input type="text" placeholder="<%=user.user_tel%>" class="input-css-zy editPhone" >
+                            </div>
+                            <button class="bnt-zy addSave_zy">保存更改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+<script type="text/javascript" src="js/g-nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/Pr-g.css">
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+    <div id="loading">
+        <img src="images/index/load.gif" alt="">
+    </div>
+<%-include g-nav.html%>
+<!--系列展示-->
+<div class="w">
+    <section id="main-g">
+        <!--banner展示-->
+        <img src="images/Pr-Img/111.jpg" alt="">
+    </section>
+    <!--Office Lady 系列-->
+    <section id="ol-g">
+        <!--标题-->
+        <p class="hh"><span>Office Lady</span>系列</p>
+        <!--<p class="tit">手袋、卫衣和T恤上饰以Elton John爵士的经典“Levon”单曲唱片封面。</p>-->
+        <!--左边展示-->
+        <div class="olL">
+            <a href="productL.html"><img src="images/Pr-Img/listZ3.jpg" alt="" class="ol1"></a>
+            <a href="productL.html"><p class="enter">进入系列</p></a>
+            <a href="productL.html"><p class="shop_N">LIZ 100 亮色漆皮尖头趾   ¥ 1,450</p></a>
+            <a href="productL.html"><p class="buy">立即购买</p></a>
+        </div>
+        <!--右边展示-->
+        <div class="olR">
+            <a href="productL.html"><img src="images/Pr-Img/listZ1.jpg" alt="" class="ol1"></a>
+            <a href="productL.html"><p class="enter">进入系列</p></a>
+            <a href="productL.html"><p class="shop_N">LIZ 100 亮色漆皮尖头趾   ¥ 1,450</p></a>
+            <a href="productL.html"><p class="buy">立即购买</p></a>
+        </div>
+        <!--垂直线-->
+        <div class="lineT"></div>
+    </section>
+    <!--queen 系列-->
+    <section id="queen">
+        <!--标题-->
+        <h1 class="hh"><span>Queen</span>系列</h1>
+        <!--<p class="tit">手袋、卫衣和T恤上饰以Elton John爵士的经典“Levon”单曲唱片封面。</p>-->
+        <!--主要banner-->
+        <div class="Q">
+            <a href=""><img src="images/Pr-Img/Queen.jpeg" alt=""></a>
+        </div>
+        <!--四周小图-->
+        <div class="qu1">
+            <a href=""><img src="images/Pr-Img/listZ5.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="shop_N1">Gucci Elton John</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+        </div>
+        <div class="qu2">
+            <a href=""><img src="images/Pr-Img/listZ12.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="shop_N1">Gucci Elton John</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+        </div>
+        <div class="qu3">
+            <a href=""><img src="images/Pr-Img/listZ9.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="shop_N1">Gucci Elton John</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+        </div>
+        <div class="qu4">
+            <a href=""><img src="images/Pr-Img/listZ8.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="shop_N1">Gucci Elton John</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+        </div>
+    </section>
+    <section id="marry">
+        <!--标题-->
+        <h1 class="hh"><span>婚鞋</span>系列</h1>
+        <!--<p class="tit">手袋、卫衣和T恤上饰以Elton John爵士的经典“Levon”单曲唱片封面。</p>-->
+        <!--左边展示-->
+        <div class="olL">
+            <a href=""><img src="images/Pr-Img/ma1.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="enter">进入系列</p></a>
+            <a href=""><p class="shop_N">LIZ 100 亮色漆皮尖头趾   ¥ 1,450</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+        </div>
+        <!--右边展示-->
+        <div class="olR">
+            <a href=""><img src="images/Pr-Img/ma2.jpg" alt="" class="ol1"></a>
+            <a href=""><p class="enter">进入系列</p></a>
+            <a href=""><p class="shop_N">LIZ 100 亮色漆皮尖头趾   ¥ 1,450</p></a>
+            <a href=""><p class="buy">立即购买</p></a>
+
+        </div>
+        <!--垂直线-->
+        <div class="lineT"></div>
+        <button id="BtnM" class="btnly">了解更多</button>
+    </section>
+</div>
+
+<%-include g-footer.html%>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/g-nav.js"></script>
+<script type="text/javascript">
+    $('header').hide();
+        $('section').hide();
+        $('footer').hide();
+        window.onload = function () {
+            setTimeout(() => {
+                $('#loading').addClass('animated zoomOutDown');
+                $('header').show();
+                $('section').show();
+                $('footer').show();
+            }, 1200);
+        }
+</script>
+</body>
+</html>

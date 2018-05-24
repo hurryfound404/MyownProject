@@ -1,0 +1,276 @@
+@m_color:#b28b60;
+@width:1190px;
+@height:100px;
+@font_size:36px;
+
+#g-nav {
+  #tel-code{
+    visibility: hidden;
+  }
+  #go-top {
+    visibility: hidden;
+  }
+}
+body {
+  background-color:#FAFAFA;
+}
+
+.paySuccess{
+  width:@width;
+  height:370px;
+  margin:0 auto;
+  //border:1px solid red;
+  background-color:#FAFAFA;
+  position: relative;
+}
+.content{
+  margin:0 auto;
+}
+.leftFloat{
+  float: left;
+  margin-left:350px;
+  margin-top:90px;
+  img{
+    border-radius:50%;
+  }
+}
+.rightFloat{
+  float: left;
+  margin-left:500px;
+  margin-top:-70px;
+}
+.functionBtn{
+  position:absolute;
+  bottom:100px;
+  left:450px;
+  //border:1px solid red;
+  //margin-top:250px;
+  //margin-left:480px;
+  a {
+    display: inline-block;
+   width:120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 80px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #232321;
+  }
+}
+.guessLove{
+  width:@width;
+  height:540px;
+  background-color:#FAFAFA;
+  margin: 20px auto 20px auto ;
+  //border:1px solid red;
+}
+.mouseOverLine{
+  border:1px solid black;
+  width:10px;
+}
+.mouseOverLine1{
+  border:1px solid black;
+  width:46px;
+  margin-top:5px;
+  //display:none;
+}
+.mouseOverLine2{
+  border:1px solid black;
+  width:30px;
+  margin-left:15px;
+  margin-top:5px;
+  display:none;
+}
+.choice1{
+  margin-left:15px;
+  margin-top:20px;
+  padding: 20px 0 30px 0;
+  //border:1px solid red;
+  cursor:pointer;
+  border-top: 1px solid #dfdfde;
+}
+.choice2{
+  float:left;
+  margin-left:15px;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+
+.lookPic1{
+  position: absolute;
+  left:10px;
+  top:70px;
+  width:220px;
+  height:320px;
+  background-color:white;
+  div{
+    img{
+      width:150px;
+      margin-left:30px;
+      margin-top:20px;
+    }
+  }
+  p{
+    text-align: center;
+  }
+  button{
+    margin-left:65px;
+    margin-top:10px;
+    width:90px;
+    height:30px;
+  }
+}
+.lookPic2{
+  position: absolute;
+  left:245px;
+  top:70px;
+  width:220px;
+  height:320px;
+  background-color:white;
+  div{
+    img{
+      width:150px;
+      margin-left:30px;
+      margin-top:20px;
+    }
+  }
+  p{
+    text-align: center;
+  }
+  button{
+    margin-left:65px;
+    margin-top:10px;
+    width:90px;
+    height:30px;
+  }
+}
+.lookPic3{
+  position: absolute;
+  left:485px;
+  top:70px;
+  width:220px;
+  height:320px;
+  background-color:white;
+  div{
+    img{
+      width:150px;
+      margin-left:30px;
+      margin-top:20px;
+    }
+  }
+  p{
+    text-align: center;
+  }
+  button{
+    margin-left:65px;
+    margin-top:10px;
+    width:90px;
+    height:30px;
+  }
+}
+.lookPic4{
+  position: absolute;
+  left:720px;
+  top:70px;
+  width:220px;
+  height:320px;
+  background-color:white;
+  div{
+    img{
+      width:150px;
+      margin-left:30px;
+      margin-top:20px;
+    }
+  }
+  p{
+    text-align: center;
+  }
+  button{
+    margin-left:65px;
+    margin-top:10px;
+    width:90px;
+    height:30px;
+  }
+}
+.lookPic5{
+  position: absolute;
+  left:955px;
+  top:70px;
+  width:220px;
+  height:320px;
+  background-color:white;
+  div{
+    img{
+      width:150px;
+      margin-left:30px;
+      margin-top:20px;
+    }
+  }
+  p{
+    text-align: center;
+  }
+  button{
+    margin-left:65px;
+    margin-top:10px;
+    width:90px;
+    height:30px;
+  }
+}
+.allPicLove{
+  position:relative;
+  ul {
+    li:first-child {
+      margin-left: 15px;
+    }
+    li {
+      float: left;
+      width: 220px;
+      background-color: #fff;
+      padding-bottom: 30px;
+      margin-right: 15px;
+      cursor: pointer;
+      transition: all .3s linear;
+      -webkit-transition: all .2s linear;
+      position: relative;
+      top: 0;
+      &:last-child {
+        margin-right: 0px;
+      }
+      img {
+        width: 100%;
+      }
+      &:hover {
+        top: -5px;
+        box-shadow: 0 0 20px hsla(0,0%,60%,.3);
+      }
+      .goods-info-recommend-name {
+        width: 100%;
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+      }
+      .goods-info-recommend-nowprice {
+        margin-top: 20px;
+        color: #c70000;
+        text-align: center;
+        font-size: 18px;
+        i {
+          font-size: 12px;
+        }
+      }
+      button {
+        width: 82px;
+        height: 30px;
+        display: block;
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+.allPicLookAt{
+  position:relative;
+  display:none;
+}
+

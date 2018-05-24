@@ -1,0 +1,46 @@
+
+<div class="userBnner_zy">
+    <!--logo字体-->
+    <span>U L I F E</span>
+    <!--导航条-->
+    <div class="user_navBox_zy">
+        <!--头像-->
+        <div class="userPhoto_zy">
+            <img  id="finalImg" src="images/userimgs/<%=user.user_pic%>" height="150" width="150"/>
+            <span id="updateImg">&#xf0048;</span>
+            <p>上传新的头像</p>
+        </div>
+        <!--用户名-->
+        <span class="userName_zy"><%=user.user_loginName%></span>
+
+        <!--图片裁剪框 start-->
+        <div style="display: none" class="tailoring-container">
+            <div class="black-cloth" onclick="closeTailor(this)"></div>
+            <div class="tailoring-content">
+                <div class="tailoring-content-one">
+                    <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+                        <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)"> 选择图片
+                    </label>
+                    <div class="close-tailoring" onclick="closeTailor(this)">×</div>
+                </div>
+                <div class="tailoring-content-two">
+                    <div class="tailoring-box-parcel">
+                        <img id="tailoringImg">
+                    </div>
+                    <div class="preview-box-parcel">
+                        <p>图片预览：</p>
+                        <div class="square previewImg"></div>
+                        <div class="circular previewImg"></div>
+                    </div>
+                </div>
+                <div class="tailoring-content-three">
+                    <button class="l-btn cropper-reset-btn">复位</button>
+                    <button class="l-btn cropper-rotate-btn">旋转</button>
+                    <button class="l-btn cropper-scaleX-btn">换向</button>
+                    <button class="l-btn sureCut" id="sureCut">确定</button>
+                </div>
+            </div>
+        </div>
+        <!--图片裁剪框 end-->
+    </div>
+</div>

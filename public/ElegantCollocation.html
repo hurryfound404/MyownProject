@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+    <link rel="stylesheet" href="css/style1-sj.css"/>
+</head>
+<body>
+<!--导航DIV-->
+<section id="container-sj">
+    <!--时尚搭配板块-->
+    <div class="module-headline1">
+        <p class="headline">ULIFE<span>时尚搭配</span></p>
+        <div class="headline-add">Fashion collocation</div>
+    </div>
+    <div class="banner">
+          <div class="mengceng">
+              <div class="div1">
+
+                 <div class="hoverMove1"></div>
+                  <a href=""><img class="picPIC" src="images/ElegantCollocation.img/koutu3.png" alt=""/></a>
+                  <div class="text1">
+                      <p class="price1">￥1,680</p>
+                      <p>绒面金属感皮革</p>
+                      <div class="hr1"></div>
+                  </div>
+              </div>
+              <div class="div2">
+                  <div class="hoverMove2"></div>
+                  <img class="lazy"  src="images/ElegantCollocation.img/koutu5.png" alt=""/>
+                  <div class="text2">
+                     <p class="price2">￥1,680</p>
+                     <p>绒面粗中跟鞋</p>
+                      <div class="hr2"></div>
+                  </div>
+              </div>
+              <div class="div3">
+                  <div class="hoverMove3"></div>
+                  <div class="text3">
+                     <p class="price3">￥1,680</p>
+                     <p>绒面金属感皮革</p>
+                      <div class="hr3"></div>
+                  </div>
+              </div>
+              <div class="div4">
+                  <img class="lazy" src="images/ElegantCollocation.img/koutu1.png" alt=""/>
+                  <div class="text4">
+                      <p class="price4">￥1,680</p>
+                      <p>绒面金属感皮革</p>
+                      <div class="hr4"></div>
+                  </div>
+              </div>
+              <div class="div5">
+                  <img class="lazy" src="images/ElegantCollocation.img/koutu2.png" alt=""/>
+              </div>
+          </div>
+    </div>
+    <!--ULIFE精选搭配模块-->
+    <div class="module-headline2">
+        <p class="headline">ULIFE<span>精选搭配</span></p>
+        <div>Selection collocation</div>
+    </div>
+    <!--瀑布流主容器-->
+    <div id="selectionCollocation" class="clearfix">
+        <!--用来分割每个数据块之间的间隔距离的DIV-->
+          <div class="box">
+              <!--定义盒子边框的样式的-->
+              <div class="pic">
+                  <img class="oPic" src="images/ElegantCollocation.img/pic1.png" alt=""/>
+              </div>
+              <p class="page">卡哇伊的选择 和高跟鞋更配</p>
+          </div>
+    </div>
+
+
+
+</section>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery-lazyload-js.js"></script>
+<script src="js/g-nav.js"></script>
+<script>
+    $(".selectionCollocation>div>div>a>img").attr("class","imgPic");
+
+    $(".div3").hover(function(){
+        $(".div5").css("transform","scale(1.1,1.1)").css("right","320px");
+        $(".div3>.text3>p").css("color","#b28b60");
+    },function(){
+        $(".div5").css("transform","scale(1,1)").css("right","300px");
+        $(".div3>.text3>p").css("color","white");
+    });
+
+    $(".div1").hover(function(){
+        $(".div1>a>img").css("transform","scale(1.1,1.1)").css("marginLeft","60px");
+        $(".div1>.text1>p").css("color","#b28b60");
+    },function(){
+        $(".div1>a>img").css("transform","scale(1,1)").css("marginLeft","100px");
+        $(".div1>.text1>p").css("color","white");
+    });
+    $(".div2").hover(function(){
+        $(".div2>img").css("transform","scale(1.1,1.1)").css("right","350px");
+        $(".div2>.text2>p").css("color","#b28b60");
+    },function(){
+        $(".div2>img").css("transform","scale(1,1)").css("right","330px");
+        $(".div2>.text2>p").css("color","white");
+    });
+    $(".div4").hover(function(){
+        $(".div4>img").css("transform","scale(1.1,1.1)").css("marginLeft","-20px");
+        $(".div4>.text4>p").css("color","#b28b60");
+    },function(){
+        $(".div4>img").css("transform","scale(1,1)").css("marginLeft","0px");
+        $(".div4>.text4>p").css("color","black");
+    });
+//滚轮监听预加载
+    $(window).scroll(function(e){
+//        console.log(scrollY);
+        if(scrollY>100){
+            $('.div4') .css("marginTop","0px").css("opacity","1");
+            $('.div2').css("top","0px").css("opacity","1");
+            $('.div3').css("bottom","0px").css("opacity","1");
+            $('.div1').css("bottom","0px").css("opacity","1");
+            $('.div5').css("bottom","0px").css("opacity","1");
+        }
+    });
+
+//    图片预加载
+
+    /**
+     * Created by Administrator on 2018/3/29.
+     */
+    $(function() {
+        $("img.imgPic").lazyload({effect:"show"});
+        $(".imgPic").fadeIn().fadeIn(2000).fadeIn("slow");
+    });
+    $("img.imgPic").lazyload({
+        placeholder : "", //用图片提前占位
+        // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+        effect: "fadeIn", // 载入使用何种效果
+        // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+        threshold: '150', // 提前开始加载
+        // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
+        event: 'sporty',  // 事件触发时才加载
+        // event,值有click(点击),mouseover(鼠标划过),sporty(运动的),foobar(…).可以实现鼠标莫过或点击图片才开始加载,后两个值未测试…
+        container: $(""),  // 对某容器中的图片实现效果
+        // container,值为某容器.lazyload默认在拉动浏览器滚动条时生效,这个参数可以让你在拉动某DIV的滚动条时依次加载其中的图片
+        failurelimit : 10 // 图片排序混乱时
+        // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+    });
+
+//    瀑布流图片定位
+    window.onload=function(){
+        waterfall('selectionCollocation','box');
+        var dataInt={"data":[{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'},{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'},{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'},{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'},{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'},{"src":'pic1.png',"innerText":'卡哇伊的选择 和高跟鞋更配'}]};
+        window.onscroll=function(){
+            var scrollTop = $(this).scrollTop();
+            //页面高度
+            var scrollHeight = $(document).height();
+            //浏览器窗口高度
+            var windowHeight = $(this).height();
+            //此处是滚动条到底部时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作
+            if (scrollTop + windowHeight == scrollHeight) {
+                console.log(111);
+                var oParent=document.getElementById('selectionCollocation');
+//             将数据块渲染到当前页面的尾部
+                for(var i=0;i<dataInt.data.length;i++){
+                    var oBox=document.createElement('div');
+                    oBox.className='box';
+                    oParent.appendChild(oBox);
+                    var oPic=document.createElement('div');
+                    oPic.className='pic';
+                    oBox.appendChild(oPic);
+                    var oImg=document.createElement('img');
+                    oImg.className='oPic';
+                    oImg.src="images/ElegantCollocation.img/"+dataInt.data[i].src;
+                    oPic.appendChild(oImg);
+                    var oPage=document.createElement('p');
+                    oPage.innerText=dataInt.data[i].innerText;
+                    oPage.className='page';
+                    oBox.appendChild(oPage);
+                }
+                waterfall('selectionCollocation','box');
+            }
+
+//          }
+        }
+    };
+    function waterfall(parent,box){
+        //将主容器下所有的CLASS为BOX的元素取出来
+        var oParent=document.getElementById(parent);
+        var oBoxs= getByClass(oParent,box);
+//        console.log(oBoxs.length);
+//        计算整个页面显示的列数（页面宽除以BOX的宽）
+        var oBoxW=oBoxs[0].offsetWidth;
+//        console.log(oBoxW)294px;
+        var cols=Math.floor(document.documentElement.clientWidth/oBoxW);
+//        console.log(cols)列数;
+//        设置主容器selectionCollocation的宽度
+        oParent.style.cssText='width:'+oBoxW*cols+'px;margin:0 auto';
+//        存储高的数组
+        var hArr=[];
+        for(var i = 0;i<oBoxs.length;i++){
+            if(i<cols){
+                hArr.push(oBoxs[i].offsetHeight);
+            }else{
+                var minH=Math.min.apply(null,hArr);
+                var index=getMinhIndex(hArr,minH);
+                oBoxs[i].style.position='absolute';
+                oBoxs[i].style.top=minH+'px';
+                oBoxs[i].style.left=oBoxs[index].offsetLeft+'px';
+//                oBoxs[i].style.left=oBoxW*index+'px';
+//                console.log(minH);
+                hArr[index]+=oBoxs[i].offsetHeight;
+            }
+        }
+//        console.log(hArr);
+    }
+    //    根据CLASS获取元素
+    function getByClass(parent,clsName){
+        var boxArr=new Array();//用来存储获取到的所有CLASS未BOX的元素
+        oElements=parent.getElementsByTagName("*");
+        for(var i=0;i<oElements.length;i++){
+            if(oElements[i].className==clsName){
+                boxArr.push(oElements[i]);
+            }
+        }
+        return boxArr;
+    }
+    function getMinhIndex(arr,val){
+        for(var i in arr){
+            if(arr[i]==val){
+                  return i;
+            }
+        }
+    }
+    //检测是否具备了滚条加载数据块的条件
+//function checkScrollSlide(){
+//     var oParent=document.getElementById('selectionCollocation');
+//     var oBoxs=getByClass(oParent,'box');
+//     var lastBoxH=[oBoxs.length-1].offsetTop+Math.floor(oBoxs[oBoxs.length-1].offsetHeight/2);
+//    var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+////    console.log(scrollTop);
+//    var height=document.body.clientHeight||document.documentElement.clientHeight;
+////    console.log(height);
+//    return (lastBoxH<scrollTop+height)?true:false;
+//}
+</script>
+</body>
+</html>

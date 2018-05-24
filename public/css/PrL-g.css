@@ -1,0 +1,396 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#ly_w {
+  width: 1190px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url("../font/iconfont.svg");
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.woff");
+  src: url("../font/iconfont.ttf");
+}
+
+#Tit {
+  text-align: center;
+  background-color: #eeeeee;
+  padding: 25px 0;
+}
+
+#Tit h2 {
+  color: #b28b60;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 10px 0;
+}
+
+#Tit p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+#shop {
+  position: relative;
+  margin: 0 auto;
+}
+
+#shop #src {
+  background-color: #f5f5f5;
+  /*width: 18%;*/
+  width: 21%;
+  /*height: 250px;*/
+  float: left;
+  height: auto;
+  /*position: fixed;*/
+  /*top: 35%;*/
+}
+
+#shop #src #filter {
+  width: 94%;
+  height: 100px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 4%;
+  overflow: hidden;
+}
+
+#shop #src #filter .fs {
+  border-bottom: 1px solid #f5f5f5f5;
+  height: 50%;
+  font-size: 13px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#shop #src #filter #show {
+  font-size: 13px;
+  color: #b28b60;
+  line-height: 50px;
+  text-align: center;
+}
+
+#shop #src #filter1 {
+  width: 94%;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 4%;
+  height: auto;
+  margin-bottom: 4%;
+}
+
+
+
+.Kind {
+  height: 40px;
+  border-top: 1px solid #f5f5f5f5;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  color:#b28b60;
+}
+
+.SHeight {
+  height: 40px;
+  border-top: 1px solid #f5f5f5f5;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  color:#b28b60;
+}
+
+.SPrice {
+  height: 40px;
+  border-top: 1px solid #f5f5f5f5;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  color:#b28b60;
+}
+#SHeight {
+  width: 94%;
+  height: 0;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+  visibility: hidden;
+  /*overflow: visible;*/
+  border-bottom: 1px solid #f5f5f5f5;
+  font-size: 16px;
+  -webkit-transition: all .3s;
+  /*display: none;*/
+}
+
+#Kind {
+  /*display: none;*/
+  visibility: hidden;
+  /*visibility: visible;*/
+  width: 94%;
+  height: 0px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5f5;
+  font-size: 16px;
+  -webkit-transition: all .3s;
+}
+
+#SPrice {
+  /*display: none;*/
+  width: 94%;
+  visibility: hidden;
+  height: 0;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5f5;
+  font-size: 16px;
+  -webkit-transition: all .3s;
+}
+
+#ind,
+#height,
+#price {
+  overflow: hidden;
+  width: 94%;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+  /*overflow: visible;*/
+  border-bottom: 1px solid #f5f5f5f5;
+  font-size: 16px;
+}
+#shop #shopL {
+  position: relative;
+  width: 78%;
+  float: right;
+  background-color: #f5f5f5;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+
+#shop #shopL #bannerS {
+  position: relative;
+}
+
+#shop #shopL #bannerS button {
+  width: 122px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 40%;
+  bottom: 25%;
+}
+
+#shop #shopL #bannerS img {
+  width: 98%;
+  margin: 0 auto;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+#shop #shopL .shopList1 {
+  margin-top: 1%;
+  margin-right: 1%;
+  float: left;
+  background-color: white;
+  width: 222px;
+  position: relative;
+  -webkit-transition: all .3s linear;
+}
+
+#shop #shopL .shopList1 img {
+  width: 222px;
+  position: absolute;
+  /*-webkit-transition: all .3s linear;*/
+}
+
+.tot {
+  position: relative;
+  width: 222px;
+  height: 296px;
+  /*border: 1px solid rebeccapurple;*/
+}
+
+#shop #shopL .shopList1 .description {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: -2%;
+}
+
+#shop #shopL .shopList1 .description p {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+#shop #shopL .shopList1 .Collection {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+}
+
+#shop #shopL .shopList1 .Collection span {
+  font-family: myfont;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.Collection:hover {
+  cursor: pointer;
+}
+
+#filter1:hover {
+  cursor: pointer;
+}
+
+.buybuy {
+  color: #b28b60;
+  clear: both;
+  cursor: pointer;
+  /* padding:  */
+}
+
+#Pages {
+  margin-top: 2%;
+  /* width: 300px; */
+  float: right;
+  clear: both;
+  height: 50px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#Pages div {
+  margin-right: 5px;
+  padding: 0px 10px;
+  /* float: left; */
+  display: inline-block;
+  height: 40px;
+  font-family: myfont;
+  text-decoration: none;
+  color: black;
+  border: 1px solid gainsboro;
+}
+#Pages #divPage {
+  /* display: inline-block; */
+  border: none;
+}
+#Pages #divPage a {
+   margin-right: 5px;
+   padding: 0px 10px;
+   /* float: left; */
+   display: inline-block;
+   height: 40px;
+   font-family: myfont;
+   text-decoration: none;
+   color: black;
+   border: 1px solid gainsboro;
+}
+
+.shopList1:hover {
+  box-shadow: 0 0 20px rgba(153, 153, 153, 0.3);
+  -webkit-transform: translateY(-5px);
+}
+
+.btnly {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all ease-in-out 0.5s;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  border: none;
+}
+
+.btnly:after {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  right: -150%;
+  content: "";
+  visibility: hidden;
+  transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+}
+
+@keyframes btnHover {
+  0% {
+    right: -150%;
+    opacity: 1;
+  }
+  50% {
+    right: -20%;
+    opacity: 1;
+  }
+  100% {
+    right: -20%;
+    opacity: 0;
+  }
+}
+
+.btnly:hover::after {
+  -webkit-animation: btnHover ease 1.5s both;
+  -moz-animation: btnHover ease 1.5s both;
+  animation: btnHover ease 1.5s both;
+  visibility: visible;
+}
+
+#success {
+  /* position: fixed;
+  width: 25%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  -webkit-animation: myamation 3s;
+  z-index: 999;
+  left: 50%;
+  font-size: 26px;
+  text-align: center;
+  line-height: 120px;
+  color: #fff;
+  top: -120px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%); */
+  position: fixed;
+  color: #fff;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px 100px;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  z-index: -999;
+  opacity: 0;
+}
+
+/*.nP:nth-child(1){*/
+
+/*float: left;*/
+
+/*text-align: left;*/
+
+/*}*/
+
+/*.nP:nth-child(2){*/
+
+/*text-align: right;*/
+
+/*float: right;*/
+
+/*}*/
+
+a {
+  text-decoration: none;
+  color: black;
+}

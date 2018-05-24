@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style2-sj.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/g-nav.css" />
+    <link rel="stylesheet" href="css/g-footer.css" />
+</head>
+
+<body>
+    <section class="paySuccess">
+        <div class="leftFloat">
+            <img src="images/paySccuess/success.png" alt="" />
+        </div>
+        <div class="rightFloat">
+            <p>您的订单已支付成功！</p>
+            <p>我们将会在24小时内发货，请留意您的手机信息！</p>
+        </div>
+        <div class="functionBtn">
+            <button class="btnly">继续购物</button>
+            <button class="btnly">返回首页</button>
+        </div>
+    </section>
+    <section class="guessLove">
+        <div>
+            <div class="choice1">
+                <p>猜你喜欢</p>
+                <div class="mouseOverLine1"></div>
+            </div>
+        </div>
+        <!--猜你喜欢-->
+        <div class="allPicLove">
+            <ul id="recommend_pro" class="clearfix">
+                <li>
+                    <img src="images/productInfo/youlike.jpg" alt="" />
+                    <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                    <p class="goods-info-recommend-nowprice">
+                        <i>￥</i>2,000</p>
+                    <button class="btnly">立即购买</button>
+                </li>
+                <li>
+                    <img src="images/productInfo/youlike.jpg" alt="" />
+                    <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                    <p class="goods-info-recommend-nowprice">
+                        <i>￥</i>2,000</p>
+                    <button class="btnly">立即购买</button>
+                </li>
+                <li>
+                    <img src="images/productInfo/youlike.jpg" alt="" />
+                    <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                    <p class="goods-info-recommend-nowprice">
+                        <i>￥</i>2,000</p>
+                    <button class="btnly">立即购买</button>
+                </li>
+                <li>
+                    <img src="images/productInfo/youlike.jpg" alt="" />
+                    <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                    <p class="goods-info-recommend-nowprice">
+                        <i>￥</i>2,000</p>
+                    <button class="btnly">立即购买</button>
+                </li>
+                <li>
+                    <img src="images/productInfo/youlike.jpg" alt="" />
+                    <p class="goods-info-recommend-name">哈哈哈哈哈哈</p>
+                    <p class="goods-info-recommend-nowprice">
+                        <i>￥</i>2,000</p>
+                    <button class="btnly">立即购买</button>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/g-nav.js"></script>
+    <script>
+        $(".choice1").click(function () {
+            $(".mouseOverLine1").css("display", "block");
+            $(".mouseOverLine2").css("display", "none");
+            $(".allPicLove").css("display", "block");
+            $(".allPicLookAt").css("display", "none");
+
+        });
+        $(".choice2").click(function () {
+            $(".mouseOverLine2").css("display", "block");
+            $(".mouseOverLine1").css("display", "none");
+            $(".allPicLookAt").css("display", "block");
+            $(".allPicLove").css("display", "none");
+        })
+
+        $("#recommend_pro").on('click', "btnly", function () {
+            $.ajax({
+                type: "get",
+                url: "/prlproid.do",
+                data: {
+                    proid: 1
+                },
+                success: function (ajaxObj) { //console.log(ajaxObj);
+                    if (ajaxObj == "ok") {
+                        window.location.href = "productInfo.html";
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

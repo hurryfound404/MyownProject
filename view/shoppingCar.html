@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+    <link rel="stylesheet" href="css/shoppingCar.css"/>
+</head>
+<body>
+<%-include g-nav.html%>
+    <section>
+        <div class="shoppingcar w">
+            <div class="shoppingcar-title">购物车详情</div>
+            <div class="shoppingcar-message">
+                <table id="shoppingcar-table" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td><input id="all-checkbox" type="checkbox" checked="checked"/>全选</td>
+                            <td>商品名称</td>
+                            <td>商品规格</td>
+                            <td>商品单价</td>
+                            <td>商品数量</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody id="shoppingcar-tbody">
+                    <%
+                    function toDecimal2(x) {
+                    var f = parseFloat(x);
+                    if (isNaN(f)) {
+                    return false;
+                    }
+                    var f = Math.round(x*100)/100;
+                    var s = f.toString();
+                    var rs = s.indexOf('.');
+                    if (rs < 0) {
+                    rs = s.length;
+                    s += '.';
+                    }
+                    while (s.length <= rs + 2) {
+                    s += '0';
+                    }
+                    return s;
+                    }
+                    %>
+                    <% var scarnum = 0%>
+                    <% var scarallMoney = 0%>
+                    <% if(datacar!=""){%>
+                    <%for(var i=0;i<datacar.length;i++){%>
+                    <% scarnum +=datacar[i].sc_amount %>
+                    <% scarallMoney +=datacar[i].sc_amount*datacar[i].pro_price %>
+                    <tr goodsid="<%=datacar[i].sc_id%>">
+                        <td><input type="checkbox" checked="checked" class="s-goods-ipt"/></td>
+                        <td>
+                            <div class="sc-goods-name">
+                                <img src="<%=datacar[i].prourl%>" alt=""/>
+                                <span><%=datacar[i].proname%></span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="sc-goods-color">颜色：<span><%=datacar[i].progg_color%></span></div>
+                            <div class="sc-goods-size">尺寸：<span><%=datacar[i].progg_size%></span></div>
+                        </td>
+                        <td>
+                            <div class="sc-goods-price">¥ <i><%=toDecimal2(datacar[i].pro_price)%></i></div>
+                        </td>
+                        <td>
+                            <span class="del-goods-num">-</span><input class="sc-goods-num" type="text" value="<%=datacar[i].sc_amount%>"/><span class="add-goods-num">+</span>
+                        </td>
+                        <td><a href="javascript:;" class="sc-delate">删除</a></td>
+                    </tr>
+                    <%}%>
+                    <%}%>
+                    </tbody>
+                </table>
+                <% if(datacar!=""){%>
+                <div class="sc-notgoods-ts" style="display: none">
+                    <p id="sc-notgoods-p">您的购物车中还没有商品，赶紧选购吧！</p>
+                    <a href="product.html" id="sc-notgoods-a" class="btnly">产品分类</a>
+                </div>
+                <% }else{%>
+                <div class="sc-notgoods-ts" style="display: block">
+                    <p id="sc-notgoods-p">您的购物车中还没有商品，赶紧选购吧！</p>
+                    <a href="product.html" id="sc-notgoods-a" class="btnly">产品分类</a>
+                </div>
+                <%}%>
+            </div>
+            <div id="sc-allmessage" class="clearfix">
+                <div class="sc-allmessage-l fl">
+                    <div class="sc-allmessage-l-l">
+                        <input id="sc-allmessage-checkbox" type="checkbox" checked="checked"/>全选<a id="sc-allmessage-l-l-del" href="javascript:;">删除选中的商品</a>
+                    </div>
+                </div>
+                <div class="sc-allmessage-r fr">
+                    <a id="user-goods-nums" href="javascript:;">您已经选中<i><%=scarnum%></i>件商品</a>
+                    <span id="user-goods-allprice">合计：<i>¥<strong><%=toDecimal2(scarallMoney)%></strong></i></span>
+                    <a id="go-accountbar" class="btnly fl" href="javacript:;">去结算</a>
+                </div>
+            </div>
+            <div class="goods-info-recommend">
+                <p class="goods-info-recommend-title">相关推荐</p>
+                <p class="goods-info-recommend-title2">RELEVANT RECOMMENDATION</p>
+                <ul class="clearfix">
+                    <%for(var i=0;i<sctjgoods.length;i++){%>
+                    <li>
+                        <img style="padding: 25px 0" src="<%=sctjgoods[i].pro_img_goods%>" alt=""/>
+                        <p class="goods-info-recommend-name"><%=sctjgoods[i].pro_name%></p>
+                        <p class="goods-info-recommend-nowprice"><i>￥</i><%=toDecimal2(sctjgoods[i].pro_new_price)%></p>
+                        <button class="btnly">立即购买</button>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+        <div class="mask-ly"></div>
+        <div class="sc-delete-confirm">
+            <p>主人，确定不要我了么？</p>
+            <div class="sc-delete-btn">
+                <button id="sc-confirm" class="btnly">确认</button>
+                <button id="sc-cancel" class="btnly">取消</button>
+            </div>
+        </div>
+    </section>
+<%-include g-footer.html%>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/g-nav.js"></script>
+    <script type="text/javascript" src="js/shoppingCar.js"></script>
+
+</body>
+</html>

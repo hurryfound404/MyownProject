@@ -1,0 +1,360 @@
+@mycolor:#c4a66a;
+@bgcolor:#232321;
+@fontcolor:#999;
+@bodycolor:#f5f5f6;
+
+#g-nav {
+  width:100%;
+  background-color: @bgcolor;
+  //height: 80px;
+  .mask-ly-nav {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .sc-delete-confirm-nav {
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    height: 220px;
+    width: 400px;
+    display: none;
+    //padding: 40px 80px;
+    background-color: #F3F3F3;
+    z-index: 999;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    overflow: hidden;
+    p {
+      font-size: 16px;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .sc-delete-btn-nav {
+      text-align: center;
+      button {
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      #sc-confirm-nav {
+        margin-right: 40px;
+      }
+    }
+  }
+  .g-nav-top {
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    position: relative;
+    .nav-top-left {
+      padding-top: 14px;
+      height: 66px;
+      #user-center,#exit-user {
+        margin: 0 5px;
+        color: #fff;
+        &:hover {
+          color: @mycolor;
+        }
+      }
+      #nav-user {
+        i {
+          font-size: 14px;
+        }
+        &::before {
+          content: "\e657";
+          font-family: "my-font";
+          font-size: 28px;
+          margin-right: 12px;
+          vertical-align: bottom;
+        }
+      }
+      #nav-login {
+        &::before {
+          content: "\e657";
+          font-family: "my-font";
+          font-size: 28px;
+          margin-right: 12px;
+          vertical-align: bottom;
+        }
+      }
+      #nav-login {
+        color: #fff;
+        margin-right: 10px;
+      }
+      #nav-register {
+        color: #fff;
+        margin-left: 10px;
+      }
+    }
+    .logo {
+      a {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        img {
+          margin-top: 20px;
+          width: 65px;
+        }
+      }
+    }
+    .nav-top-right {
+      padding-top: 14px;
+      height: 66px;
+      .search {
+        position: relative;
+        margin-right: 30px;
+        #nav-search {
+          height: 38px;
+          width: 150px;
+          padding-left: 8px;
+          padding-right: 35px;
+          border: 1px solid #fff;
+          color: #fff;
+          background-color: @bgcolor;
+          opacity: 0;
+        }
+        #search-btn {
+          font-family: "my-font";
+          background-color: @bgcolor;
+          position: absolute;
+          right: 10px;
+          top: 26px;
+          font-size: 28px;
+          cursor: pointer;
+        }
+      }
+      .mall-car {
+        position: relative;
+        padding: 0 10px;
+        #mall-car-btn {
+          font-family: "my-font";
+          position: relative;
+          top: 6px;
+          font-size: 28px;
+          color: #fff;
+          line-height: 0;
+        }
+        #car-num {
+          position: absolute;
+          right: 2px;
+          top: 18px;
+          background-color: #fff;
+          color: @bgcolor;
+          width: 22px;
+          height: 22px;
+          line-height: 22px;
+          text-align: center;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+        }
+        .car-message-notgoods {
+          padding-top: 96px;
+          background:#fff url("../images/g-nav/icon_shopingcart.png") center 30px no-repeat;
+        }
+        .car-message-hasgoods {
+          padding: 18px 20px 0;
+          background:#fff;
+          color: #232321;
+          p {
+            font-size: 14px;
+            text-align: left;
+            font-weight: 300;
+            line-height: 14px;
+            margin-bottom: 5px;
+          }
+          ul{
+            li {
+              padding: 15px 0;
+              border-bottom: 1px solid #dfdfde;
+              img {
+                float: left;
+                width: 48px;
+                height: 48px;
+                border: 1px solid #232321;
+              }
+              .user-car-goods-name {
+                float: left;
+                line-height: 14px;
+                margin-left: 20px;
+              }
+              .user-car-goods-price {
+                float: right;
+                line-height: 14px;
+                text-align: right;
+                .user-goods-price {
+                  color: #c70000!important;
+                  margin-right: 5px;
+                }
+                i {
+                  margin-left: 5px;
+                }
+               .user-goods-scbtn {
+                  color: #232321!important;
+                  cursor: pointer;
+                  margin-top: 20px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+          .go-user-goodscar {
+            display: block;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            margin: 15px 0 15px 10px;
+            line-height: 30px;
+            text-align: center;
+            background: #232321;
+            color: #fff;
+            float: right;
+          }
+        }
+        #car-message {
+          position: absolute;
+          right: 0;
+          top: 80px;
+          width: 350px;
+          min-height: 70px;
+          text-align: center;
+          display: none;
+          z-index: 99;
+          box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+          -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+          span {
+            font-size: 14px;
+            color: #999;
+          }
+        }
+        &:hover #car-message{
+          display: block;
+        }
+      }
+    }
+  }
+  .g-nav-bottom {
+    ul {
+      margin-top: 10px;
+      li {
+        float: left;
+        width: 140px;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 140px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: @fontcolor;
+          cursor: pointer;
+          transition: top .2s linear;
+          -webkit-transition: top .2s linear;
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+        a {
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: 140px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-size: 20px;
+          color: @mycolor;
+          transition: top .2s linear;
+          -webkit-transition: top .2s linear;
+          letter-spacing: 1px;
+        }
+        &:hover span{
+          top: -50px;
+        }
+        &:hover a{
+          top: 0;
+        }
+      }
+      .first-li {
+        margin-left: 64px;
+      }
+      .line {
+        width: 40px;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        color: @fontcolor;
+        margin: 0 2px;
+      }
+    }
+  }
+  #go-top {
+    z-index: 999;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    font-family: "my-font";
+    font-size: 34px;
+    padding: 30px 22px;
+    cursor: pointer;
+    background-color: @bodycolor;
+    display: none;
+    animation: gotop1 .5s linear both;
+    &:hover {
+      animation: gotop .5s linear both;
+    }
+  }
+  #tel-code {
+    display: none;
+    padding-top: 101px;
+    position: fixed;
+    z-index: 999;
+    bottom: 155px;
+    right: 0;
+    width: 124px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    -webkit-transition: background 0.25s ease;
+    background: url("../images/g-nav/qrcode_default.png") no-repeat center top;
+    &:hover {
+      background: url("../images/g-nav/qrcode_hover.png") no-repeat center top;
+    }
+    span {
+      width: 100%;
+      display: inline-block;
+      padding-top: 15px;
+      text-align: center;
+      color: #c0a369;
+    }
+  }
+}
+
+@keyframes gotop {
+  from{
+    background-color: @bodycolor;
+  }
+  to{
+    color: #fff;
+    background-color: @bgcolor;
+  }
+}
+@keyframes gotop1 {
+  from{
+    color: #fff;
+    background-color: @bgcolor;
+  }
+  to{
+    background-color: @bodycolor;
+  }
+}

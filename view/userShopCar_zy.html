@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULIFE个人中心</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/userCenter_zy.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/g-nav.css"/>
+    <link rel="stylesheet" href="css/g-footer.css"/>
+</head>
+<body>
+<!--遮罩层-->
+<div class="hiddenBody"></div>
+<!--是否确定删除模态框-->
+<div class="massageSure">
+    <div class="massageSure_title_zy">
+        <span>来自Ulife的消息</span>
+        <span class="exsitSureMassage">&#xe60e;</span>
+    </div>
+    <!--横线-->
+    <div class="massageSure_line_x"></div>
+    <div class="massageSure_content_zy">
+        <span>是否确定删除</span>
+        <button class="bnt-zy exsitSureMassage">确认</button>
+    </div>
+</div>
+<div class="contents_zy">
+    <!--导航-->
+    <%-include g-nav.html%>
+    <!--主要内容-->
+    <div class="w mainCtent_zy">
+        <!--banner部分图片-->
+        <%-include userBnner-commen.html%>
+        <div class=" w userContent_box_zy">
+            <div class="userContent_main_zy">
+                <%-include userLeft-tab-commen.html%>
+                <div class="main_box_zy">
+                    <span>我的购物车</span>
+                    <!--横线-->
+                    <div class="lineX_zy"></div>
+                    <!--购物车表-->
+                    <div class="tabChange_content_zy">
+                        <!--tab栏和搜索栏-->
+                        <div class="clearfix carTab_ul_zy">
+                            <input type="text" placeholder="请输入商品名称" class="input-css-zy carSelectInpute_zy clearfix">
+                            <button class="bnt-zy car_buttonSelect_zy clearfix">搜索</button>
+                        </div>
+                        <!--灰色隔条-->
+                        <div class="childNav1_zy">
+                            <!--购物车-->
+                            <label>购物车</label>
+                        </div>
+                        <!--表格-->
+                        <div class="tables_zy">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <td><input type="checkbox" class="selectAll">全选</td>
+                                    <td>商品</td>
+                                    <td>商品名称</td>
+                                    <td>单价</td>
+                                    <td>尺码</td>
+                                    <td>数量</td>
+                                    <td>金额</td>
+                                    <td>操作</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <%for(let i=0;i<datacar1.length;i++){%>
+                                <tr class="userOption" scid="<%=datacar1[i].sc_id%>">
+                                    <td><input type="checkbox" scid="<%=datacar1[i].sc_id%>">选择</td>
+                                    <td><img src="<%=datacar1[i].carImgs%>" height="100" width="100"/></td>
+                                    <td class="shopCarName"><%=datacar1[i].carName%></td>
+                                    <td><%=datacar1[i].pro_price%></td>
+                                    <td><%=datacar1[i].progg_size%></td>
+                                    <td><%=datacar1[i].sc_amount%></td>
+                                    <td><%=datacar1[i].pro_price%></td>
+                                    <td><a class="deletButton_zy">删除</a></td>
+                                </tr>
+                                <%}%>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--底部灰色条-->
+                        <div class="car_childNav2_zy">
+                            <!--购物车底部灰色条-->
+                            <input type="checkbox" class="selectAll">
+                            <label>全选</label>
+                            <button class="bnt-zy car_buttomButton_zy" id="pl">批量删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include g-footer.html%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/userCenter_zy.js"></script>
+<script type="text/javascript" src="js/g-nav.js"></script>
+</body>
+
+</html>
